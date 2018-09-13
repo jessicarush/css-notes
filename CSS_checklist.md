@@ -64,7 +64,7 @@
     text-align: center;
   }
   ```
-- [ ] Styles are commented where needed and appropriate
+- [ ] Styles are commented where needed and appropriate.
 - [ ] Media queries are placed close to their relevant rule sets whenever possible.
 - [ ] White space is used consistently to separate sections of code.
 - [ ] Rules are separated with one blank line.
