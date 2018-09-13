@@ -1,0 +1,16 @@
+html {
+    /* Set root font size */
+    font-size: 16px;
+    /* Do not adjust font size on mac os */
+    -webkit-text-size-adjust: 100%;
+    /* Use ligatures */
+    -webkit-font-variant-ligatures: common-ligatures;
+    font-variant-ligatures: common-ligatures;
+    /* Helps fonts look more consistent in differemt displays */
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* Increase the contrast of text against background */
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
