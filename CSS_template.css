@@ -16,31 +16,27 @@
   --emphasis-color-dark: rgb(45, 47, 55);
 }
 
-/* DEFAULTS --------------------------------------------------------------- */
 
-body {
+
+/* DEFAULTS --------------------------------------------------------------- */
+html {
   color: var(--body-color);
   font-family: var(--body-font);
   font-size: 16px;
   font-weight: 400;
-  margin: 0;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-h1 {
-  color: var(--heading-color);
-  font-family: var(--heading-font);
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 1.2em;
-  margin: 0 0 45px 0;
+body {
+  margin: 0;
 }
 p {
+  font-size: 1rem;
   line-height: 1.6em;
-  margin:0 0 20px 0;
-}
-a {
-  text-decoration: none;
+  margin: 0 0 20px 0;
 }
 ul {
   list-style-type: none;
@@ -48,16 +44,20 @@ ul {
   padding: 0;
 }
 
+
+
 /* TYPOGRAPHY ------------------------------------------------------------- */
 
 .small-allcaps {
   color: var(--heading-color);
-  font-size: 14px;
+  font-size: 0.85rem;
   font-weight: 700;
   line-height: 1.8em;
   text-transform: uppercase;
   margin: 0;
 }
+
+
 
 /* LINKS & BUTTONS -------------------------------------------------------- */
 
@@ -66,8 +66,8 @@ ul {
   color: var(--emphasis-color);
   font-style: italic;
 }
-.primary-link:focus,
 .primary-link:hover,
+.primary-link:focus,
 .primary-link:active {
   text-decoration: underline;
 }
@@ -87,8 +87,8 @@ ul {
   border: 2px solid var(--emphasis-color-dark);
   color: var(--emphasis-color-dark);
 }
-.btn--dark:focus,
 .btn--dark:hover,
+.btn--dark:focus,
 .btn--dark:active {
   border-color: var(--emphasis-color);
   color: var(--emphasis-color);
@@ -99,8 +99,8 @@ ul {
   border: 2px solid rgba(230, 230, 230, 0.7);
   color: rgba(230, 230, 230, 0.9);
 }
-.btn--light:focus,
 .btn--light:hover,
+.btn--light:focus,
 .btn--light:active {
   border-color: rgba(240, 240, 240, 1);
   color: rgba(240, 240, 240, 1);
@@ -111,11 +111,13 @@ ul {
   background: var(--emphasis-color);
   color: #fff;
 }
-.btn--solid:focus,
 .btn--solid:hover,
+.btn--solid:focus,
 .btn--solid:active {
   background: var(--emphasis-color-dark);
 }
+
+
 
 /* LAYOUT ----------------------------------------------------------------- */
 
@@ -124,7 +126,9 @@ ul {
   flex-wrap: wrap;
 }
 
-/* REUSABLE COMPONENTS ---------------------------------------------------- */
+
+
+/*  COMPONENTS ------------------------------------------------------------ */
 
 .icon-group {
   border-top: 1px solid rgba(200, 200, 200, 1);
@@ -137,13 +141,12 @@ ul {
 }
 .icon-group--link {
   color: var(--emphasis-color);
-  font-size: 18px;
+  font-size: 1.15rem;
 }
 .icon-group--link:hover {
   color: var(--emphasis-color-dark);
 }
 
-/* SPECIFIC COMPONENTS ---------------------------------------------------- */
 
 .subscribe-form {
   width: 100%;
@@ -155,7 +158,7 @@ ul {
   background: #fff;
   border-radius: 4px 0 0 4px;
   color: var(--emphasis-color);
-  font-size: 14px;
+  font-size: 0.85rem;
   padding: 10px 0;
   text-indent: 10px;
   width: 65%;
@@ -177,16 +180,23 @@ ul {
   background: var(--emphasis-color-darker);
 }
 
-/* COSMETIC & UTILITY ----------------------------------------------------- */
+
+
+/* COSMETIC --------------------------------------------------------------- */
+
+.gradient-bg {
+  background: var(--emphasis-color);
+  background: linear-gradient(to bottom right, var(--emphasis-color-darker), var(--emphasis-color));
+}
+
+
+
+/* UTILITY ---------------------------------------------------------------- */
 
 .u-nomargin {
   margin: 0;
 }
-.gradient-bg {
-  background: var(--emphasis-color);
-  background: -webkit-linear-gradient(to bottom right, var(--emphasis-color-darker), var(--emphasis-color));
-  background: linear-gradient(to bottom right, var(--emphasis-color-darker), var(--emphasis-color));
-}
+
 
 /* STATE ------------------------------------------------------------------ */
 
