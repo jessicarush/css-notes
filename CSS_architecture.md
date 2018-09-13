@@ -12,9 +12,11 @@ CSS should be written in such a way that it is:
 ## Suggestions
 
 
-### 1. Avoid modifying components based on who the parent are.
+### 1. Avoid modifying components based on who the parents are.
 
-First, CSS should assume as little HTML structure as possible. Second, if a certain component needs to look different in a different scenario, it should be called something different. For example, don't:
+First, CSS should assume as little HTML structure as possible. Second, if a certain component needs to look different in a different scenario, it should be called something different.
+
+For example, don't:
 
 ```css
 .widget {
@@ -28,7 +30,7 @@ First, CSS should assume as little HTML structure as possible. Second, if a cert
 }
 ```
 
-Instead, create classes that extend other ones:
+Instead, create classes that extend:
 ```css
 .widget {
   /* base rules */
@@ -53,9 +55,9 @@ For example, don't:
   /* rules */
 }
 ```
-This makes for tidy HTML, but at the cost of messy unscalable, un-reusable CSS. Complex selectors are fragile. Aggressive attempts to avoid putting any style hints or hooks in markup only lead to overloading stylesheets with DOM information.
+This makes for tidy HTML, but at the cost of messy unscalable, unreusable CSS. Complex selectors are fragile. Aggressive attempts to avoid putting any style hints or hooks in markup only lead to overloading stylesheets with DOM information.
 
-In general, you should try to avoid tag selectors altogether. Apply classes directly to the elements you want to style to improve predictability.
+In general, you should try to avoid tag selectors. Apply classes directly to the elements you want to style to improve predictability.
 
 
 ### 3. Avoid using *qualified selectors*
@@ -84,18 +86,16 @@ Do this:
 }
 ```
 
-In the event that you want to use a qualified selector to indicate the HTML element that the class is intended for use this convention:
+In the event that you want to use a qualified selector to indicate the HTML element that the class is intended for, use the following convention.
 
 Instead of:
 ```css
-ul.nav {
-}
+ul.nav {}
 ```
 
 Do this:
 ```css  
-/*ul*/.nav {
-}
+/*ul*/.nav {}
 ```
 
 
@@ -104,22 +104,14 @@ Do this:
 In this example `.title` is too common a name. It may end up being used somewhere else and unexpected styling will occur.
 
 ```css
-.widget {
-  /* rules */
-}
-.widget .title {
-  /* rules */
-}
+.widget {}
+.widget .title {}
 ```
 
 Instead, do this:
 ```css
-.widget {
-  /* rules */
-}
-.widget__title {
-  /* rules */
-}
+.widget {}
+.widget__title {}
 ```
 
 
@@ -351,7 +343,7 @@ Try to consider each piece of the UI as a component. Some advise using two words
 .profile-box__name {}
 ```
 
-To reiterate from earlier, avoid defining any positioning type properties (position, floats, margins, width, height) in these component style. The exception to this is when you have elements that are intended to have a fixed width for example logos or icon images.
+To reiterate from earlier, avoid defining any positioning type properties (position, floats, margins, width, height) in these component styles. The exception to this is when you have elements that are intended to have a fixed width, for example logos or icon images.
 
 
 ### 9. Helpers
