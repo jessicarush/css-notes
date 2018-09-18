@@ -9,7 +9,7 @@ html {
     /* Use ligatures */
     -webkit-font-variant-ligatures: common-ligatures;
     font-variant-ligatures: common-ligatures;
-    /* Helps fonts look more consistent in differemt displays */
+    /* Helps fonts look more consistent in different displays */
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
