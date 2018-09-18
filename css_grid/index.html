@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid Layouts</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <link href="css/base.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container-a base">
+    <div class="container-a__content-a">
+      <h1> Explicit Grid.</h1>
+    </div>
+    <div class="container-a__content-b">
+      <p> CSS Grid Layout is the most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a 1-dimensional system. You work with Grid Layout by applying CSS rules both to a parent element (which becomes the Grid Container) and to that elements children (which become Grid Items).</p>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">Mozillas guide on Grid Layouts</a><br>
+      <a href="https://gridbyexample.com/">Rachel Andrew's Grid by Example</a></p>
+    </div>
+  </div>
+
+
+  <div class="container-b base">
+    <div class="container-b__content-a">
+      <h1>Grid Container Properties.</h1>
+    </div>
+    <div class="container-b__content-b">
+      <ul>
+        <code>
+          <li>dispay: grid;</li>
+          <li>grid-template-columns: 350px 1fr 150px;</li>
+          <li>grid-template-rows: 50px auto 100px;</li>
+          <li>grid-template-areas: 'left middle right'</li>
+          <li>grid-auto-rows: 100px;</li>
+          <li>grid-auto-columns: 100px;</li>
+          <li>grid-auto-flow: column;  (or 'row', 'row dense', 'column dense)</li>
+          <li>grid-column-gap: 5px;</li>
+          <li>grid-row-gap: 5px;</li>
+          <li>grid-gap: 5px;</li>
+          <li class="comment"><em>/* (Shorthand) grid-template: grid-template-rows / grid-template-columns */</em></li>
+          <li>grid-template: 50px auto 100px / 350px 1fr 150px; </li>
+          <li class="comment"><em>/* (Shorthand) grid-template: 'grid-template-areas' template-row 'grid-template-areas' template-row / grid-template-columns */</em></li>
+          <li>grid-template: 'side nav-l nav-r' 50px 'side main-l main-r' auto 'foot foot foot' 100px / 1fr 2fr 2fr; </li>
+        </code>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="container-c base">
+    <div class="container-c__content-a">
+      <h1> Grid Item Properties.</h1>
+    </div>
+    <div class="container-c__content-b">
+      <ul>
+        <code>
+          <li>grid-column-start: 3;</li>
+          <li>grid-column-end: span 3;</li>
+          <li>grid-row-start: 2;</li>
+          <li>grid-row-end: 4; </li>
+          <li class="comment"><em>/* (Shorthand) grid-column: column-start / column-end */</em></li>
+          <li>grid-column: 3 / span 3;</li>
+          <li class="comment"><em>/* (Shorthand) grid-row: row-start / row-end */</em></li>
+          <li>grid-row: 2 / 4; </li>
+          <li class="comment"><em>/* (Shorthand) grid-area: row-start / column-start / row-end / column-end */</em></li>
+          <li>grid-area: 2 / 4 / 3 / span 3;</li>
+        </code>
+      </ul>
+    </div>
+  </div>
+
+
+  <ul class="container-d base">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+    <li>e</li>
+    <li>f</li>
+    <li>g</li>
+    <li>h</li>
+    <li>i</li>
+    <li>j</li>
+    <li>k</li>
+    <li>l</li>
+    <li>m</li>
+    <li>n</li>
+    <li>o</li>
+    <li>p</li>
+    <li>q</li>
+    <li>r</li>
+    <li>s</li>
+    <li>t</li>
+    <li>u</li>
+    <li>v</li>
+    <li>w</li>
+    <li>x</li>
+    <li>y</li>
+    <li>z</li>
+  </ul>
+
+  <ul class="container-e base">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+    <li>e</li>
+    <li>f</li>
+    <li>g</li>
+    <li>h</li>
+    <li>i</li>
+    <li>j</li>
+    <li>k</li>
+    <li>l</li>
+    <li>m</li>
+    <li>n</li>
+    <li>o</li>
+    <li>p</li>
+    <li>q</li>
+    <li>r</li>
+    <li>s</li>
+    <li>t</li>
+    <li>u</li>
+    <li>v</li>
+    <li>w</li>
+    <li>x</li>
+    <li>y</li>
+    <li>z</li>
+  </ul>
+
+  <div class="container-f base">
+    <div class="container-f__content-a">
+      <h1> Named areas.</h1>
+    </div>
+    <div class="container-f__content-b">
+      <p> CSS Grid Layout excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives. Like tables, grid layout enables an author to align elements into columns and rows. However, many more layouts are either possible or easier with CSS grid than they were with tables. For example, a grid container's child elements could position themselves so they actually overlap and layer, similar to CSS positioned elements.</p>
+    </div>
+  </div>
+
+</body>
+</html>
