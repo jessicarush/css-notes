@@ -1,21 +1,17 @@
 @charset "UTF-8";
 
-
-
 /* VARIABLES -------------------------------------------------------------- */
 
 :root {
   --heading-font: 'Open Sans', sans-serif;
   --subheading-font: 'Open Sans', sans-serif;
   --body-font: 'Open Sans', sans-serif;
-  --minor-font: 'Open Sans', sans-serif;
-  --heading-color: rgba(50,50,50,.9);
+  --heading-color: rgba(40,40,80,.9);
   --subheading-color: rgb(0,0,0);
-  --body-color: rgba(70,70,70,.9);
-  --minor-color: rgb(190,190,190);
-  --emphasis-color: rgb(110,116,129);
-  --emphasis-color-light: rgb(220,220,220);
-  --emphasis-color-dark: rgb(45,47,55);
+  --body-color: rgba(70,70,85,.9);
+  --minor-color: rgb(200,200,210);
+  --emphasis-color: rgb(120,120,140);
+  --emphasis-color-dark: rgb(100,100,120);
 }
 
 
@@ -32,7 +28,6 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-
 }
 
 body {
@@ -145,26 +140,6 @@ ul {
 
 /*  COMPONENTS ------------------------------------------------------------ */
 
-.icon-group {
-  border-top: 1px solid rgb(200,200,200);
-  margin: 20px 0;
-  padding-top: 12px;
-}
-
-.icon-group--item {
-  display: inline-block;
-  padding-right: 10px;
-}
-
-.icon-group--link {
-  color: var(--emphasis-color);
-  font-size: 1.15rem;
-}
-
-.icon-group--link:hover {
-  color: var(--emphasis-color-dark);
-}
-
 .subscribe-form {
   width: 100%;
 }
@@ -199,7 +174,7 @@ ul {
 }
 
 .subscribe-form__submit:focus {
-  background: var(--emphasis-color-darker);
+  background: var(--emphasis-color-dark);
 }
 
 
@@ -208,7 +183,7 @@ ul {
 
 .gradient-bg {
   background: var(--emphasis-color);
-  background: linear-gradient(to bottom right, var(--emphasis-color-darker), var(--emphasis-color));
+  background: linear-gradient(to bottom right, var(--emphasis-color-dark), var(--emphasis-color));
 }
 
 
@@ -228,12 +203,12 @@ ul {
 
 ::selection {
   background: var(--emphasis-color);
-  color: #FFF;
+  color: #fff;
 }
 
 ::-moz-selection {
   background: var(--emphasis-color);
-  color: #FFF;
+  color: #fff;
 }
 
 ::-moz-focus-inner {
