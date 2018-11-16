@@ -1,5 +1,31 @@
 # CSS Architecture
 
+This describes some best practices and thoughts for structuring CSS code.
+
+## Table of Contents
+
+<!-- toc -->
+
+- [Goal](#goal)
+- [Suggestions](#suggestions)
+  * [1. Avoid modifying components based on who the parents are.](#1-avoid-modifying-components-based-on-who-the-parents-are)
+  * [2. Avoid overly complicated selectors.](#2-avoid-overly-complicated-selectors)
+  * [3. Avoid using *qualified selectors*](#3-avoid-using-qualified-selectors)
+  * [4. Avoid overly generic class names.](#4-avoid-overly-generic-class-names)
+  * [5. Avoid making a single rule do too much.](#5-avoid-making-a-single-rule-do-too-much)
+  * [6. Be DRY - but don't be ridiculous about it.](#6-be-dry---but-dont-be-ridiculous-about-it)
+  * [7. Favor Composition over Inheritance](#7-favor-composition-over-inheritance)
+  * [8. Name classes using a logical structure](#8-name-classes-using-a-logical-structure)
+  * [9. Helpers](#9-helpers)
+  * [10. Organize your CSS into a logical structure](#10-organize-your-css-into-a-logical-structure)
+- [Naming](#naming)
+  * [1. CSS that depends on HTML](#1-css-that-depends-on-html)
+  * [2. HTML that depends on CSS](#2-html-that-depends-on-css)
+  * [Summary:](#summary)
+- [Sources:](#sources)
+
+<!-- tocstop -->
+
 ## Goal
 
 CSS should be written in such a way that it is:
@@ -456,11 +482,9 @@ Giving the class name `news` provides no useful information and ensures the styl
 
 In short, pick a name that is sensible but somewhat ambiguous. **Aim for high reusability**.
 
-
-
 ------
 
-Sources:  
+## Sources:  
 [cssguidelin.es](https://cssguidelin.es/)  
 [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)  
 [codeguide.co](http://codeguide.co/)
