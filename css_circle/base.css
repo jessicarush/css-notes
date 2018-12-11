@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+
+
+/* VARIABLES -------------------------------------------------------------- */
+
+:root {
+  --heading-font: 'Open Sans', sans-serif;
+  --main-font: 'Open Sans', sans-serif;
+  --minor-font: 'Open Sans', sans-serif;
+  --heading-color: rgba(0,0,50,.9);
+  --main-color: rgba(70,70,90,.9);
+  --minor-color: rgb(190,190,200);
+  --emphasis-color: rgb(27,211,165);
+}
+
+
+
+/* DEFAULTS --------------------------------------------------------------- */
+
+html {
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* TYPOGRAPHY ------------------------------------------------------------- */
+
+.primary-heading {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+/* good for block-level */
+.circle-letter-flex {
+  align-items: center;
+  background: var(--main-color);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  margin: .2rem;
+  width: 3rem;
+}
+
+/* good for inline but margin doesn't work on table-cell */
+.circle-letter-table {
+  background: var(--main-color);
+  border-radius: 50%;
+  color: #fff;
+  display: table-cell;
+  height: 3rem;
+  text-align: center;
+  vertical-align: middle;
+  width: 3rem;
+}
+
+/* good for inline but padding must change with width & height */
+.circle-letter-padding {
+  background: var(--main-color);
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  height: 3rem;
+  line-height: 1rem;
+  margin: .2rem;
+  padding-top: calc((3rem - 1rem) / 2);
+  text-align: center;
+  width: 3rem;
+}
+
+
+
+/* LINKS & BUTTONS -------------------------------------------------------- */
+
+/* LAYOUT ----------------------------------------------------------------- */
+
+/* COMPONENTS ------------------------------------------------------------- */
+
+/* COSMETIC --------------------------------------------------------------- */
+
+/* UTILITY ---------------------------------------------------------------- */
+
+/* STATE ------------------------------------------------------------------ */
