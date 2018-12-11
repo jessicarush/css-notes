@@ -6,3 +6,7 @@ This is not a complete CSS Reference, but a collection of notes and demos that I
 
 - '[The Book of CSS3](http://thebookofcss3.com/)' - *Peter Gasston*  
 - '[CSS Secrets](http://shop.oreilly.com/product/0636920031123.do)' - *Lea Verou*  
+
+Some helpful links I keep going back to:
+
+- [CSS Selector Reference](https://www.w3schools.com/cssref/css_selectors.asp)
