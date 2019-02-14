@@ -80,7 +80,7 @@
     "keyframes-name-pattern": null,
     "length-zero-no-unit": true,
     "linebreaks": "unix",
-    "max-empty-lines": 2,
+    "max-empty-lines": null,
     "max-line-length": null,
     "max-nesting-depth": null,
     "media-feature-colon-space-after": "always",
