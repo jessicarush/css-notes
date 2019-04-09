@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Columns</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <link href="base.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container-a base">
+    <h1>CSS Columns</h1>
+    <p>
+      CSS Multi-column Layout is a module of CSS that adds support for multi-column layouts. Support is included for establishing the number of columns, as well as how content should flow from column to column, gap sizes between columns, and column dividing lines (known as column rules) along with their appearance.
+    </p>
+    <p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">MDN's CSS Multi-column Layout</a><br>
+      <a href="https://www.w3schools.com/CSS/css3_multiple_columns.asp">W3C's CSS Multi-column Layout</a>
+    </p>
+
+    <h1 class="break-before">Properties</h1>
+
+    <code>
+      <ul>
+        <li>column-count: 3;</li>
+        <li class="comment">/* content is arranged into &lt;integer&gt; columns of equal size. column-count can also be set to auto, in which case the number of columns is determined by other CSS properties, such as column-width */</li>
+        <li>column-fill: auto;</li>
+        <li class="comment">/* controls how an element's contents are balanced when broken into columns (auto, balance, balance-all). onlt works when container has a set height */</li>
+        <li>column-gap: 5rem;</li>
+        <li class="comment">/* sets the size of the gap (gutter) between an element's columns */ </li>
+        <li>column-rule-color: silver;</li>
+        <li class="comment">/* color of line between columns */</li>
+        <li>column-rule-style: dashed;</li>
+        <li class="comment">/* style of line between columns */</li>
+        <li>column-rule-width: 1px;</li>
+        <li class="comment">/* width of line between columns */</li>
+        <li>column-rule: dashed 1px silver;</li>
+        <li class="comment">/* shorthand for color, style, width */</li>
+        <li>column-span: all;</li>
+        <li class="comment">/*  makes it possible for an element to span across all columns when its value is set to all. by default, doesn't work in firefox (can be enabled by the user but what user would ever know to do that?) */</li>
+        <li>column-width: 14rem;</li>
+        <li class="comment">/* specifies the ideal column width in a multi-column layout. the container will have as many columns as can fit without any of them having a width less than the column-width value */ </li>
+        <li>columns: 14rem auto;</li>
+        <li class="comment">/* shorthand for setting column-width and column-count */ </li>
+      </ul>
+    </code>
+
+    <h1 class="break-before">Breaks</h1>
+    <p>
+      There are various places we might want to control our breaks: breaks inside boxes, for example inside a figure element; breaks before and after boxes, for example a heading; and breaks between lines.
+    </p>
+
+    <code>
+      <ul>
+        <li>break-inside: avoid;</li>
+        <li class="comment">/* keeps the content inside a box from breaking (for example, applied to a figure with an img and fig caption)*/</li>
+        <li>break-before: column;</li>
+        <li>break-after: column;</li>
+        <li class="comment">/* forces a break before or after an element */</li>
+        <li>break-before: avoid;</li>
+        <li>break-after: avoid;</li>
+        <li class="comment">/* avoids breaking before or after an element */</li>
+        <li>orphans: 3;</li>
+        <li>widows: 3;</li>
+        <li class="comment">/* the orphans property controls the number of lines left on their own at the end of a fragment. the widows property controls the number left on their own at the start of a fragment. both take an integer as a value, which represents the number of lines to keep together at the end or start of a fragment. these properties only work inside a block container, such as a paragraph */</li>
+      </ul>
+    </code>
+  </div>
+
+  <div class="container-b base">
+    <h1 class="spanning-element">Spanning element</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit, enim sit amet egestas vestibulum, mauris nibh iaculis quam, id convallis mauris diam eu metus. Vivamus tempor egestas lacus. Praesent euismod, turpis ut tincidunt vestibulum, orci ante porttitor tellus, in posuere quam ex vitae tortor. Aenean ornare blandit congue. Donec suscipit mi ex, eu maximus ex ornare vel. Praesent non pulvinar mauris, commodo faucibus urna. Nunc interdum condimentum odio, ultricies mollis lectus mollis vitae. Praesent pharetra aliquam nisl, vel pharetra justo tincidunt id. Etiam turpis felis, eleifend sed quam sed, tincidunt ornare diam. Etiam a nisl euismod, dapibus elit in, consectetur ante. Etiam id neque orci. Donec blandit enim ligula. Vestibulum odio lectus, tristique non auctor vestibulum, gravida eget massa.
+    </p>
+    <p>
+      Sed lacinia faucibus mattis. Aliquam erat volutpat. Curabitur quis tristique eros. Suspendisse erat orci, imperdiet ac laoreet at, dapibus non massa. Donec blandit, eros eu consequat fermentum, arcu libero laoreet erat, id posuere sapien lorem vel metus. Nulla euismod cursus nulla, fermentum malesuada massa faucibus a. Pellentesque tristique arcu in tristique congue. Sed sodales ante mi, ac molestie metus condimentum in. Phasellus suscipit erat vel nunc consectetur faucibus.
+    </p>
+    <p>
+      Fusce finibus elit a ipsum elementum, ac euismod mauris sollicitudin. Maecenas feugiat venenatis arcu in porttitor. Fusce luctus ullamcorper enim eu aliquam. Morbi rhoncus purus odio, at malesuada tellus pulvinar sed. Suspendisse potenti. Curabitur quis fermentum massa, ut ullamcorper turpis. Donec mauris diam, eleifend nec purus egestas, feugiat congue leo. Etiam vehicula sodales arcu. Cras ornare, lacus ac tempus scelerisque, purus augue vulputate dui, sit amet porta sem erat non est. Vestibulum in diam venenatis, condimentum nunc vitae, viverra orci. Aliquam erat volutpat. Curabitur nec est ante. Duis porta euismod ipsum et pharetra. Donec consectetur, metus vitae rhoncus efficitur, libero felis varius justo, sit amet porta lorem ligula interdum sem. Cras quis convallis felis.
+    </p>
+    <h1 class="spanning-element">Spanning element</h1>
+    <p>
+      Fusce nunc orci, porttitor eget feugiat in, accumsan quis urna. Quisque et lacinia ipsum. Mauris ornare augue in velit iaculis dapibus ut nec quam. Maecenas pulvinar mauris quis eros dictum, aliquam dignissim est rutrum. Cras scelerisque tempor lobortis. Integer et ante nisl. Proin scelerisque sem quis tellus molestie ultricies. Nunc egestas semper massa, eu lobortis augue rutrum sit amet.
+    </p>
+    <p>
+      Donec id odio fringilla, convallis mi eget, porttitor nisi. Suspendisse ultricies aliquet ipsum, et interdum ligula. Nullam dignissim ut ipsum non faucibus. Donec accumsan consequat justo, ultricies iaculis risus lobortis laoreet. Sed nec placerat est. Duis tincidunt laoreet libero a pellentesque. Aliquam erat volutpat. Nunc luctus diam nunc. Aenean elementum purus et erat gravida, vel dictum lacus volutpat. Duis neque ligula, cursus a lobortis eget, malesuada eget nisl. Fusce commodo rutrum magna, placerat viverra massa eleifend sit amet. Maecenas nec rutrum ante.
+    </p>
+
+  </div>
+
+</body>
+</html>

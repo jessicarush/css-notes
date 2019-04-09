@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+
+
+/* VARIABLES -------------------------------------------------------------- */
+
+:root {
+  --heading-font: 'Open Sans', sans-serif;
+  --main-font: 'Open Sans', sans-serif;
+  --minor-font: 'Open Sans', sans-serif;
+  --heading-color: rgba(0,0,50,.9);
+  --main-color: rgba(70,70,90,.9);
+  --minor-color: rgb(180,180,190);
+  --emphasis-color: rgb(27,211,165);
+  --highlight-color: rgba(127,255,212,.15);
+}
+
+
+
+/* DEFAULTS --------------------------------------------------------------- */
+
+html {
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7em;
+  color: var(--main-color);
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-size: 2.6rem;
+  font-weight: 300;
+  line-height: 1.2em;
+  color: var(--heading-color);
+  margin: 0 0 25px 0;
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* TYPOGRAPHY ------------------------------------------------------------- */
+
+.comment {
+  color: var(--minor-color);
+}
+
+
+/* LINKS & BUTTONS -------------------------------------------------------- */
+
+a:link,
+a:visited {
+  color: var(--emphasis-color);
+  text-decoration-skip: edges;
+}
+
+a:hover,
+a:active {
+  background: var(--highlight-color);
+}
+
+
+/* LAYOUT ----------------------------------------------------------------- */
+
+.base {
+  border: solid 2px aquamarine;
+  min-width: 650px;
+  max-width: 1200px;
+  margin: 15px auto;
+}
+
+
+.container-a {
+  column-count: 3;
+  column-gap: 3rem;
+  column-rule: dashed 1px var(--minor-color);
+}
+
+.spanning-element {
+  column-span: all;
+}
+
+.break-before {
+  break-before: column;
+}
+
+.container-b {
+  /* column-count: auto; */
+  /* column-width: 14rem; */
+  columns: auto 14rem;
+  column-gap: 2rem;
+  /* column-fill: auto;
+  height: 900px; */
+}
+
+
+/* COMPONENTS ------------------------------------------------------------- */
+
+/* COSMETIC --------------------------------------------------------------- */
+
+/* UTILITY ---------------------------------------------------------------- */
+
+/* STATE ------------------------------------------------------------------ */
