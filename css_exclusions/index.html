@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Exclusions</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <link href="base.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="fixed">
+
+    <div class="exclusion_element box">
+      <code>wrap-flow: both;<br> /* creates an exclusion element */</code>
+    </div>
+
+    <h1>CSS Exclusions (not yet fully supported).</h1>
+    <p>CSS exclusions define arbitrary areas around which inline content can flow, and can be defined on any block-level element. An exclusion element is a block-level element which is not a float, and generates an exclusion box. An element becomes an exclusion when its <code>wrap-flow</code> property is set to something other than its initial value of auto.</p>
+
+    <p>Exclusions have to be positioned somehow, using any of the positioning schemes we currently have at our disposal like absolute positioning, grid and so on (but not floats floats).</p>
+
+    <p>
+      <a href="https://rachelandrew.co.uk/archives/2016/03/16/css-exclusions-and-grid-layout/">CSS Exclusions explained by Rachel Andrew</a><br>
+      <a href="https://www.chenhuijing.com/blog/css-exclusions-with-queen-bey/">CSS Exclusions explained by Chen Hui Jing.</a>
+    </p>
+
+    <h1>wrap-flow.</h1>
+    <p>There are seven possible values for the <code>wrap-flow</code> property:</p>
+
+    <ul>
+      <li><code>auto</code> - no exclusion created.</li>
+      <li><code>both</code> - inline content can flow on all sides of the exclusion.</li>
+      <li><code>start</code> - inline content can only flow around the start edge.</li>
+      <li><code>end</code> - inline content can only flow around the end edge.</li>
+      <li><code>minimum</code> - inline content can only flow around the edge with least available space.</li>
+      <li><code>maximum</code> - inline content can only flow around the edge with most available space.</li>
+      <li><code>clear</code> - nothing flows along the start or end edge of the exclusion.</li>
+    </ul>
+
+    <h1>wrap-through.</h1>
+    <p>With the <code>wrap-through</code> property, by setting a value of <code>none</code>, the inline content will flow <em>through</em> the exclusion, as if it wasn’t there to begin with.</p>
+  </div>
+
+</body>
+</html>

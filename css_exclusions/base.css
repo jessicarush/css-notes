@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/* VARIABLES -------------------------------------------------------------- */
+
+:root {
+  --heading-font: 'Open Sans', sans-serif;
+  --main-font: 'Open Sans', sans-serif;
+  --minor-font: 'Open Sans', sans-serif;
+  --heading-color: rgba(0,0,50,.9);
+  --main-color: rgba(70,70,90,.9);
+  --minor-color: rgb(180,180,190);
+  --emphasis-color: rgb(27,211,165);
+}
+
+
+
+/* DEFAULTS --------------------------------------------------------------- */
+
+html {
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7em;
+  color: var(--main-color);
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-size: 2.6rem;
+  font-weight: 300;
+  line-height: 1.2em;
+  color: var(--heading-color);
+  margin: 0 0 25px 0;
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+/* TYPOGRAPHY ------------------------------------------------------------- */
+
+/* LINKS & BUTTONS -------------------------------------------------------- */
+
+a:link,
+a:visited {
+  color: var(--minor-color);
+  text-decoration-skip: edges;
+}
+
+a:hover,
+a:active {
+  color: var(--emphasis-color);
+}
+
+
+
+/* LAYOUT ----------------------------------------------------------------- */
+
+.flexible {
+  border: solid 2px aquamarine;
+  min-width: 380px;
+  max-width: 1400px;
+  margin: 15px auto;
+}
+
+.fixed {
+  border: solid 2px aquamarine;
+  width: 800px;
+  height: 800px;
+  margin: 15px auto;
+}
+
+.box {
+  background: AliceBlue;
+  padding: 25px;
+}
+
+.box:nth-child(even) {
+  background: MintCream;
+}
+
+.exclusion_element {
+  position: absolute;
+  top: 25%;
+  left: calc(50% - 100px);
+  width: 200px;
+  wrap-flow: both;
+}
+
+
+
+
+/* COMPONENTS ------------------------------------------------------------- */
+
+/* COSMETIC --------------------------------------------------------------- */
+
+.comment {
+  color: var(--minor-color);
+}
+
+
+
+/* UTILITY ---------------------------------------------------------------- */
+
+/* STATE ------------------------------------------------------------------ */
