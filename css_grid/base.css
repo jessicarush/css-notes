@@ -121,7 +121,7 @@ a:active {
   /* grid-row-start: 3; */
   /* grid-row-end: 3; */
   /* Shorthand: row-start / column-start / row-end / column-end */
-  grid-area: 3 / 7 / span 1 / span 2;
+  grid-area: 2 / 7 / span 1 / span 2;
 }
 
 .container-c__content-b {

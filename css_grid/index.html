@@ -16,8 +16,11 @@
     </div>
     <div class="container-a__content-b">
       <p> CSS Grid Layout is the most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a 1-dimensional system. You work with Grid Layout by applying CSS rules both to a parent element (which becomes the Grid Container) and to that elements children (which become Grid Items).</p>
-      <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">Mozillas guide on Grid Layouts</a><br>
-      <a href="https://gridbyexample.com/">Rachel Andrew's Grid by Example</a></p>
+      <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">Mozillas guide on Grid Layouts</a><br>
+        <a href="https://gridbyexample.com/">Rachel Andrew's Grid by Example</a><br>
+        <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS-Tricks Complete Guide to Grid.</a>
+      </p>
     </div>
   </div>
 
@@ -27,8 +30,9 @@
       <h1>Grid Container Properties.</h1>
     </div>
     <div class="container-b__content-b">
-      <ul>
-        <code>
+      <code>
+        <ul>
+
           <li>dispay: grid;</li>
           <li>grid-template-columns: 350px 1fr 150px;</li>
           <li>grid-template-rows: 50px auto 100px;</li>
@@ -43,8 +47,9 @@
           <li>grid-template: 50px auto 100px / 350px 1fr 150px; </li>
           <li class="comment"><em>/* (Shorthand) grid-template: 'grid-template-areas' template-row 'grid-template-areas' template-row / grid-template-columns */</em></li>
           <li>grid-template: 'side nav-l nav-r' 50px 'side main-l main-r' auto 'foot foot foot' 100px / 1fr 2fr 2fr; </li>
-        </code>
-      </ul>
+
+        </ul>
+      </code>
     </div>
   </div>
 
@@ -54,8 +59,9 @@
       <h1> Grid Item Properties.</h1>
     </div>
     <div class="container-c__content-b">
-      <ul>
-        <code>
+      <code>
+        <ul>
+
           <li>grid-column-start: 3;</li>
           <li>grid-column-end: span 3;</li>
           <li>grid-row-start: 2;</li>
@@ -66,8 +72,9 @@
           <li>grid-row: 2 / 4; </li>
           <li class="comment"><em>/* (Shorthand) grid-area: row-start / column-start / row-end / column-end */</em></li>
           <li>grid-area: 2 / 4 / 3 / span 3;</li>
-        </code>
-      </ul>
+
+        </ul>
+      </code>
     </div>
   </div>
 

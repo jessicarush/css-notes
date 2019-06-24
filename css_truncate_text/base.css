@@ -28,6 +28,7 @@ html {
 /* TYPOGRAPHY ------------------------------------------------------------- */
 
 .truncate-text {
+  /* display: inline-block; */
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
