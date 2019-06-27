@@ -47,7 +47,8 @@ html {
   width: 3rem;
 }
 
-/* good for inline but margin doesn't work on table-cell */
+/* good for inline but margin doesn't work on table-cell
+   and absolute positioning blows it up */
 .circle-letter-table {
   background: var(--main-color);
   border-radius: 50%;
