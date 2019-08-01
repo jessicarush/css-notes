@@ -75,20 +75,20 @@ code {
 
 .shape-2 {
   float: left;
-  shape-outside: url('button.png');
+  shape-outside: url('img/button.png');
   margin-right: 15px;
   shape-margin: 10px;
 }
 
 .shape-2b {
   float: right;
-  shape-outside: url('hand.png');
+  shape-outside: url('img/hand.png');
   shape-image-threshold: .1;
 }
 
 .shape-2c {
   float: left;
-  shape-outside: url('blend.png');
+  shape-outside: url('img/blend.png');
   shape-image-threshold: .9;
 }
 
