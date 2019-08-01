@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+
+
+/* VARIABLES -------------------------------------------------------------- */
+
+:root {
+  --heading-font: 'Open Sans', sans-serif;
+  --main-font: 'Open Sans', sans-serif;
+  --minor-font: 'Open Sans', sans-serif;
+  --heading-color: rgba(0,0,50,.9);
+  --main-color: rgba(70,70,90,.9);
+  --minor-color: rgb(190,190,200);
+  --emphasis-color: rgb(27,211,165);
+}
+
+
+
+/* DEFAULTS --------------------------------------------------------------- */
+
+html {
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7em;
+}
+
+code {
+  line-height: 1.5em;
+  background: lightcyan;
+}
+
+/* TYPOGRAPHY ------------------------------------------------------------- */
+
+.primary-heading {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.filler {
+  color: var(--minor-color);
+}
+
+
+/* LINKS & BUTTONS -------------------------------------------------------- */
+
+/* LAYOUT ----------------------------------------------------------------- */
+
+.centered-container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.box {
+  box-sizing: border-box;
+  background: aquamarine;
+  border: solid 12px lightcyan;
+  width: 200px;
+  height: 200px;
+  margin-right: 15px;
+  padding: 15px;
+}
+
+.shape-1 {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  float: left;
+  shape-outside: margin-box;
+}
+
+.shape-2 {
+  float: left;
+  shape-outside: url('button.png');
+  margin-right: 15px;
+  shape-margin: 10px;
+}
+
+.shape-2b {
+  float: right;
+  shape-outside: url('hand.png');
+  shape-image-threshold: .1;
+}
+
+.shape-2c {
+  float: left;
+  shape-outside: url('blend.png');
+  shape-image-threshold: .9;
+}
+
+.shape-3 {
+  border-radius: 0 0 100% 0;
+  float: left;
+  shape-outside: margin-box;
+}
+
+.shape-4 {
+  border-radius: 0 0 100% 0;
+  float: left;
+  shape-outside: border-box;
+}
+
+.shape-5 {
+  border-radius: 0 0 100% 0;
+  float: left;
+  shape-outside: padding-box;
+}
+
+.shape-6 {
+  border-radius: 0 0 100% 0;
+  float: left;
+  shape-outside: content-box;
+}
+
+.shape-7 {
+  width: 200px;
+  height: 200px;
+  border: solid 1px black;
+  float: left;
+  shape-outside: inset(0 100px 100px 50px round 0);
+}
+
+.shape-8 {
+  width: 200px;
+  height: 200px;
+  border: solid 1px black;
+  border-radius: 50%;
+  margin-right: 15px;
+  float: left;
+  shape-outside: circle(50%);
+}
+
+.shape-9 {
+  width: 100px;
+  height: 300px;
+  float: left;
+  shape-outside: ellipse(30% 50% at left);
+}
+
+.shape-10 {
+  width: 300px;
+  height: 300px;
+  float: left;
+  shape-outside: polygon(0 27px, 0 225px, 106px 121px);
+}
+
+.shape-11::before {
+  content: '';
+  display: block;
+  height: 200px;
+  width: 200px;
+  border-radius: 0 0 100% 0;
+  float: left;
+  shape-outside: polygon(0 0, 200px 200px, 0 200px);
+}
+
+.shape-12 {
+  width: 250px;
+  float: left;
+  shape-outside: polygon(154px 9px, 215px 250px, 3px 184px);
+  clip-path: polygon(154px 9px, 215px 250px, 3px 184px);
+  shape-margin: 10px;
+}
+
+/* COMPONENTS ------------------------------------------------------------- */
+
+/* COSMETIC --------------------------------------------------------------- */
+
+/* UTILITY ---------------------------------------------------------------- */
+
+/* STATE ------------------------------------------------------------------ */

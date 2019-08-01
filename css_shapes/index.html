@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Shapes</title>
+  <link href="base.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="centered-container">
+    <h1 class="primary-heading">
+      CSS Shapes
+    </h1>
+    <nav></nav>
+  </header>
+
+  <main class="centered-container">
+
+
+    <section>
+      <div class="box shape-1">
+        <code>
+          float: left;<br>
+          shape-outside: margin-box;
+        </code>
+      </div>
+      <p>CSS Shapes are applied to floating elements. The specification defines a number of different ways to define a shape on a floated element but the end result is that it causes wrapping lines to wrap round the shape rather than following the rectangle of the element's box. The current specification states the element has to be floated in order to apply a basic-shape to it. This has the side-effect of creating a simple fallback for cases where the browser doesn't support CSS Shapes.</p>
+    </section>
+
+
+    <section>
+      <h2 class="primary-heading">properties</h2>
+      <ul>
+        <li><code>shape-outside</code> — defines the shape. the value can be one of four basic shapes, or, it can be set to the element's box model values: <code>border-box, padding-box, content-box, margin-box</code>, or, it can use a image that has transparancy.</li>
+        <li><code>shape-image-threshold</code> — used with <code>shape-outside: url()</code> to set the threshold of image transparency used to define the shape area. If the value of shape-image-threshold is 0.0 (which is the initial value) then the area must be fully transparent. If the value is 1.0 then it is fully opaque.</li>
+        <li><code>shape-margin</code> — sets a margin around the defined shape. Usually this works in tandem with a regular margin because the shape may get clipped by reference box's margin box.</li>
+      </ul>
+    </section>
+
+
+    <section>
+      <h2 class="primary-heading">shapes from images</h2>
+      <img src="button.png" class="shape-2">
+      <p>You can use an image that has transparency to define the shape. Here, I've placed and floated and image, then added the property <code>shape-outside: url('button.png')</code>. In order for this to work though, the image has to be <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">CORS compatible</a>, which basically means that the shape-outside image must be on the same server as the web page. Unfortunately though, this doesn't translate when you're testing locally (CORS doesn't seem to like <code>file:///</code>). To work around this do one of the following:</p>
+
+      <ul>
+        <li>use Safari and from the Develop menu, choose "Disable Local File Restrictions". </li>
+        <li>use python to run a simple local server from your testing directory with <code>python -m SimpleHTTPServer</code> OR <code>python3 -m http.server</code>, then access your files through <code>http://localhost:8000/</code>.
+      </ul>
+
+      <img src="hand.png" class="shape-2b">
+      <p class="filler">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sodales arcu. Nulla tincidunt ipsum tortor, ut mollis lacus accumsan id. Phasellus fermentum sem eu orci hendrerit, ac tincidunt velit feugiat. Fusce mollis, ligula sed consectetur sollicitudin, quam erat lobortis risus, in volutpat metus diam ac velit. Nulla luctus magna sed purus lobortis, non laoreet ligula sodales. Phasellus eget sodales arcu. Nulla tincidunt ipsum tortor, ut mollis lacus accumsan id.</p>
+
+      <h2 class="primary-heading">...with shape-image-threshold</h2>
+
+      <img src="blend.png" class="shape-2c">
+      <p class="filler">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sodales arcu. Nulla tincidunt ipsum tortor, ut mollis lacus accumsan id. Phasellus fermentum sem eu orci hendrerit, ac tincidunt velit feugiat. Fusce mollis, ligula sed consectetur sollicitudin, quam erat lobortis risus, in volutpat metus diam ac velit. Nulla luctus magna sed purus lobortis, non laoreet ligula sodales. Phasellus eget sodales arcu. Nulla tincidunt ipsum tortor, ut mollis lacus accumsan id.</p>
+    </section>
+
+
+    <section>
+      <h2 class="primary-heading">shapes from box model values</h2>
+      <p>A shape can be defined using a value from the CSS Box Model. When doing so, if an element has a <code>border-radius</code>, the shape will follow that radius.</p>
+
+      <div class="box shape-3">
+        <code>shape-outside: margin-box</code>
+      </div>
+      <p class="filler">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sodales arcu. Nulla tincidunt ipsum tortor, ut mollis lacus accumsan id. Phasellus fermentum sem eu orci hendrerit, ac tincidunt velit feugiat. Fusce mollis, ligula sed consectetur sollicitudin, quam erat lobortis risus, in volutpat metus diam ac velit. Nulla luctus magna sed purus lobortis, non laoreet ligula sodales.</p>
+
+      <div class="box shape-4">
+        <code>shape-outside: border-box</code>
+      </div>
+      <p class="filler">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sodales arcu. Nulla tincidunt ipsum tortor, ut mollis lacus accumsan id. Phasellus fermentum sem eu orci hendrerit, ac tincidunt velit feugiat. Fusce mollis, ligula sed consectetur sollicitudin, quam erat lobortis risus, in volutpat metus diam ac velit. Nulla luctus magna sed purus lobortis, non laoreet ligula sodales.</p>
+
+      <div class="box shape-5">
+        <code>shape-outside: padding-box</code>
+      </div>
+      <p class="filler">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sodales arcu. Nulla tincidunt ipsum tortor, ut mollis lacus accumsan id. Phasellus fermentum sem eu orci hendrerit, ac tincidunt velit feugiat. Fusce mollis, ligula sed consectetur sollicitudin, quam erat lobortis risus, in volutpat metus diam ac velit. Nulla luctus magna sed purus lobortis, non laoreet ligula sodales.</p>
+
+      <div class="box shape-6">
+        <code>shape-outside: content-box</code>
+      </div>
+      <p class="filler">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sodales arcu. Nulla tincidunt ipsum tortor, ut mollis lacus accumsan id. Phasellus fermentum sem eu orci hendrerit, ac tincidunt velit feugiat. Fusce mollis, ligula sed consectetur sollicitudin, quam erat lobortis risus, in volutpat metus diam ac velit. Nulla luctus magna sed purus lobortis, non laoreet ligula sodales.</p>
+    </section>
+
+
+    <section>
+      <h2 class="primary-heading">basic shapes</h2>
+      <ul>
+        <li><code>inset()</code> - same as a default rectangle but allows you to inset (offset) the values,  thus pulling the content in over the shape</li>
+        <li><code>circle()</code> - creates a circle</li>
+        <li><code>ellipse()</code> - creates an oval</li>
+        <li><code>polygon()</code> - creates a polygon</li>
+      </ul>
+
+      <p>Note: Firefox has an <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes" target="_blank">awesome feature</a> in the developer tools that lets you edit a shape (or clip-path) in the browser so you can copy the new values to your css. Don't know if the other browsers have this too, but will look into it.</p>
+
+      <h2 class="primary-heading">inset()</h2>
+      <div class="shape-7"></div>
+      <p>inset() takes values for top, right, bottom and left, plus a final value optional value for border-radius. For example, <code>shape-outside: inset(0 50px 100px 50px round 0);</code>.</p>
+      <p class="filler">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sodales arcu. Nulla tincidunt ipsum tortor, ut mollis lacus accumsan id. Phasellus fermentum sem eu orci hendrerit, ac tincidunt velit feugiat. Fusce mollis, ligula sed consectetur sollicitudin, quam erat lobortis risus, in volutpat metus diam ac velit. Nulla luctus magna sed purus lobortis, non laoreet ligula sodales.</p>
+
+      <h2 class="primary-heading">circle()</h2>
+      <div class="shape-8"></div>
+      <p>circle() can accept two possible arguments. The first is the shape-radius and the second is the optional position. Radius can be a length or percentage but can also be one of the keywords <code>closest-side</code> or <code>farthest-side</code>. Position, if used, is set after they keyword 'at'. If omitted, the poistion will be set to center, however you can use any valid position here to indicate the position of the centre of the circle. For example, <code>shape-outside: circle(50% at 50%);</code>.</p>
+
+      <h2 class="primary-heading">ellipse()</h2>
+      <div class="shape-9"></div>
+      <p>ellipse() works similar to the circle except that it takes two radius: x and y. It also can take an optional at position. For example, <code>shape-outside: ellipse(30% 50% at left);</code>.</p>
+      <p class="filler">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sodales arcu. Nulla tincidunt ipsum tortor, ut mollis lacus accumsan id. Phasellus fermentum sem eu orci hendrerit, ac tincidunt velit feugiat. Fusce mollis, ligula sed consectetur sollicitudin, quam erat lobortis risus, in volutpat metus diam ac velit. Nulla luctus magna sed purus lobortis, non laoreet ligula sodales.</p>
+
+      <h2 class="primary-heading">polygon()</h2>
+      <div class="shape-10"></div>
+      <p>polygon() is the most complex. This shape accepts three or more pairs of values (a polygon must at least draw a triangle). These values are co-ordinates drawn with reference to the reference box. The Firefox dev tools are unbelievably helpful for working with this shape. For example, <code>shape-outside: polygon(0 27px, 0 225px, 300px 300px);</code>.</p>
+      <p class="filler">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sodales arcu.</p>
+    </section>
+
+
+    <section>
+      <h2 class="primary-heading">using pseudo-elements</h2>
+      <p class="shape-11">You don't have to create an actual <code>img</code> or <code>div</code> to float and apply the shape-outside property to. You <em>could</em> create a pseudo-element instead with <code>::before</code>. The main downside to this is that pseudo elements don't seem to work with the dev tools, so may not be as easy to fiddle around with but still a good option once your values are known.</p>
+    </section>
+
+    <section>
+      <h2 class="primary-heading">combining with clip-path</h2>
+      <img src="clouds.jpg" class="shape-12">
+      <p class="">The same basic shape values used for shape-outside can be used with clip-path. For example the image to the left has the properties: <code>shape-outside: ellipse(40% 50%); clip-path: ellipse(40% 50%);</code></p>
+    </section>
+
+  </main>
+
+  <footer>
+  </footer>
+
+</body>
+</html>
