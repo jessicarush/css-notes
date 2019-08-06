@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Height Transition</title>
+  <link href="base.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1 class="primary-heading">CSS Height Transition</h1>
+    <nav></nav>
+  </header>
+
+  <main>
+
+    <div class="content-box trigger">
+      <p>Hover to see a height transition.</p>
+      <div class="is-hidden">This demo is full of issues. None of the browsers seem to be able to calculate the scrollHeight properly when using a google font. If I use a generic font, all is well. Next, this doesn't really work at all in firefox. Mozilla says "When an element's content does not generate a vertical scrollbar, then its scrollHeight property is equal to its clientHeight property." clientHeight logs as being undefined and scrollHeight logs as being 77px. The only way I was able to work-around this was to multiply the scrollHeight by a guessed amount like 1.7. Not an ideal solution at all. Lastly, Firefox seems to completely ignore line-height and width so overall it's crap.</div>
+    </div>
+
+  </main>
+
+  <footer>
+  </footer>
+
+</body>
+</html>

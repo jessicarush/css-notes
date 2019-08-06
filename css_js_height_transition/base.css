@@ -23,12 +23,10 @@ html {
   font-family: var(--main-font);
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.7em;
 }
 
-code {
-  line-height: 1.5em;
-  background: lightcyan;
+p {
+  margin: 0;
 }
 
 /* TYPOGRAPHY ------------------------------------------------------------- */
@@ -45,44 +43,28 @@ code {
 
 /* LAYOUT ----------------------------------------------------------------- */
 
-.centered-container {
-  max-width: 800px;
-  margin: 0 auto;
+.content-box {
+  background: rgb(242,244,248);
+  padding: 15px;
 }
 
-.box {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px 0;
-  float: left;
+.is-hidden {
+  transition: max-height 0.5s;
+  overflow: hidden;
+  max-height: 0;
 }
+
+.trigger:hover > .is-hidden {
+  max-height: var(--js-scrollHeight);
+}
+
+
+
 
 
 /* COMPONENTS ------------------------------------------------------------- */
 
 /* COSMETIC --------------------------------------------------------------- */
-
-.trans-example-1 {
-  margin-left: 0;
-  transition: margin-left .5s ease-in-out .5s;
-}
-
-.trans-example-1:hover {
-  margin-left: 50px;
-}
-
-.color-box {
-  background: rgb(242,244,248);
-  transition: background .5s;
-}
-
-.color-box:hover {
-  background: var(--random-bg);
-}
-
 
 /* UTILITY ---------------------------------------------------------------- */
 

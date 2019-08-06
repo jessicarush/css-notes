@@ -11,19 +11,58 @@
 
 <body>
 
-  <header>
-    <h1 class="primary-heading">CSS Height Transition</h1>
+  <header class="centered-container">
+    <h1 class="primary-heading">CSS Transitions</h1>
+    <p>Create gradual transitions between the values of specific CSS properties. The behavior of these transitions can be controlled by specifying their timing, duration, and delay. The transition takes place between two states of an element, usually defined using pseudo-classes like :hover or :active or dynamically set using JavaScript.</p>
     <nav></nav>
   </header>
 
-  <main>
+  <main class="centered-container">
 
-    <div class="content-box trigger">
-      <p>Hover to see a height transition.</p>
-      <div class="is-hidden">This demo is full of issues. None of the browsers seem to be able to calculate the scrollHeight properly when using a google font. If I use a generic font, all is well. Next, this doesn't really work at all in firefox. Mozilla says "When an element's content does not generate a vertical scrollbar, then its scrollHeight property is equal to its clientHeight property." clientHeight logs as being undefined and scrollHeight logs as being 77px. The only way I was able to work-around this was to multiple the scrollHeight by a guessed amount like 1.7. Not an ideal solution at all. Lastly, Firefox seems to completely ignore line-height and width so overall it's crap.</div>
+    <h2 class="primary-heading">properties</h2>
+    <ul>
+      <li class="trans-example-1"><code>transition</code> -  shorthand for <code>transition-property</code>, <code>transition-duration</code>, <code>transition-timing-function</code>, and <code>transition-delay</code>. For example: <code>transition: margin-left .5s ease-in-out .5s;</code>. You can specify more than one property by separating each with a comma like: <code>transition: margin-left .5s, color 1s;</code> or you can use the keword all like: <code>transition: all .5s,</code></li>
+      <li><code>transition-delay</code> - the duration to wait before starting a property's transition effect. Can be in specified in <code>s</code> seconds or <code>ms</code> milliseconds.</li>
+      <li><code>transition-duration</code> - the length of time a transition animation should take to complete. Can be in specified in <code>s</code> seconds or <code>ms</code> milliseconds.</li>
+      <li><code>transition-property</code> - sets the CSS properties to which a transition effect should be applied. Multiple properties can be separated by a comma, or us ethe keyword <code>all</code>. Not all css properties can be transitioned. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties" target="_blank">here for an up to date list</a>.</li>
+      <li><code>transition-timing-function</code> -  lets you establish an acceleration curve so that the speed of the transition can vary over its duration. There are a number of pre-made keyword functions:
+        <ul>
+          <li><code>ease</code> - the default value, increases in velocity towards the middle of the transition, slowing back down at the end.</li>
+          <li><code>ease-in</code> - starts off slowly, with the transition speed increasing until complete.</li>
+          <li><code>ease-out</code> - starts transitioning quickly, slowing down the transition continues.</li>
+          <li><code>ease-in-out</code> -starts transitioning slowly, speeds up, and then slows down again.</li>
+          <li><code>linear</code> - transitions at an even speed.</li>
+          <li><code>step-start</code> - Equal to steps(1, jump-start)</li>
+          <li><code>step-end</code> - Equal to steps(1, jump-end)</li>
+        </ul>
+        or you can get really specific and build your own with these:
+        <ul>
+          <li><code>cubic-bezier(0.1, 0.7, 1.0, 0.1)</code></li>
+          <li><code>steps(4, jump-start)</code></li>
+          <li><code>steps(10, jump-end)</code></li>
+          <li><code>steps(20, jump-none)</code></li>
+          <li><code>steps(5, jump-both)</code></li>
+          <li><code>steps(6, start)</code></li>
+          <li><code>steps(8, end)</code></li>
+        </ul>
+        See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function" target="_blank">MDN for descriptions</a>.
+      </li>
+
+    </ul>
+
+
+    <h2 class="primary-heading">css transition + variable + js</h2>
+
+    <div class="box color-box">
+      <div>Hover</div>
     </div>
-
-    <div class="flex-centered color-box">
+    <div class="box color-box">
+      <div>Hover</div>
+    </div>
+    <div class="box color-box">
+      <div>Hover</div>
+    </div>
+    <div class="box color-box">
       <div>Hover</div>
     </div>
 
