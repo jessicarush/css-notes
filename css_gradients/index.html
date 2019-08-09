@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Gradients</title>
+  <link href="base.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="centered-container">
+    <h1 class="primary-heading">CSS Gradients</h1>
+    <nav></nav>
+  </header>
+
+  <main class="centered-container">
+    <p>The gradient CSS data type is a special type of image that consists of a transition between two or more colors</p>
+
+
+    <h2 class="primary-heading">gradient types</h2>
+    <ul>
+      <li><code>linear-gradient(#7fffd4, #683af9);</code></li>
+      <li><code>radial-gradient(#7fffd4, #683af9);</code></li>
+      <li><code>repeating-linear-gradient(#7fffd4, #683af9 50px);</code></li>
+      <li><code>repeating-radial-gradient(#7fffd4, #683af9 50px);</code></li>
+      <li><code>conic-gradient(#7fffd4, #683af9);</code></li>
+    </ul>
+
+    <div class="box linear-g"></div>
+    <div class="box radial-g"></div>
+    <div class="box repeat-linear-g"></div>
+    <div class="box repeat-radial-g"></div>
+    <div class="box conic-g"></div>
+    <div class="box fancy-repeat-g"></div>
+
+
+    <h2 class="primary-heading">direction</h2>
+    <p>The linear gradients and conical can include a direction. For example:</p>
+    <ul>
+      <li><code>linear-gradient(to bottom right, tomato, powderblue);</code></li>
+      <li><code>linear-gradient(45deg, tomato, powderblue);</code></li>
+      <li><code>linear-gradient(0.25turn, tomato, powderblue);</code></li>
+      <li><code>conic-gradient(from 45deg, #7fffd4, #683af9);</code></li>
+    </ul>
+
+
+    <h2 class="primary-heading">stop position</h2>
+    <p>You can add stop positions to shift the mid-point of the transition between two colors as well as set when colors start and stop. For example:</p>
+    <ul>
+      <li><code>linear-gradient(to left, tomato, 20%, powderblue);</code></li>
+      <li><code>linear-gradient(red 70%, orange 80%, yellow 90%);</code></li>
+      <li><code>linear-gradient(red 0 33%, orange 33% 66%, yellow 66% 100%);</code></li>
+    </ul>
+    <div class="box-wide fancy-stop-g"></div>
+    <div class="box fancy-conic-g"></div>
+
+
+    <h2 class="primary-heading">multiple gradients</h2>
+    <p>You can layer up gradients that have transparancy in their rgba values. for example:</p>
+    <ul>
+      <li><code>background:<br>
+          linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 95%),</br>
+          linear-gradient(to left, rgba(255,0,0,1), rgba(255,0,0,0));</code></li>
+      <li><code>background:<br>
+        linear-gradient(217deg, rgba(255,0,0,.85), rgba(255,0,0,0) 75%),<br>
+        linear-gradient(127deg, rgba(0,255,0,.85), rgba(0,255,0,0) 75%),<br>
+        linear-gradient(336deg, rgba(0,0,255,.85), rgba(0,0,255,0) 75%);</code></li>
+    </ul>
+    <div class="box fancy-multiple-g-1"></div>
+    <div class="box fancy-multiple-g-2"></div>
+    <div class="box fancy-multiple-g-3"></div>
+
+
+    <h2 class="primary-heading">center point</h2>
+    <p>for conical gradients, you can set the center point by using the at keyword. For example:</p>
+    <ul>
+      <li><code>conic-gradient(at 20% 100%, honeydew, powderblue);</code></li>
+      <li><code>repeating-conic-gradient(at 20% 100%, honeydew 0 9deg, powderblue 9deg 18deg);</code></li>
+    </ul>
+
+    <div class="box fancy-repeat-conic-g"></div>
+
+
+
+
+
+  </main>
+
+  <footer>
+  </footer>
+
+</body>
+</html>

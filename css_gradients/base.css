@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+
+
+/* VARIABLES -------------------------------------------------------------- */
+
+:root {
+  --heading-font: 'Open Sans', sans-serif;
+  --main-font: 'Open Sans', sans-serif;
+  --minor-font: 'Open Sans', sans-serif;
+  --heading-color: rgba(0,0,50,.9);
+  --main-color: rgba(70,70,90,.9);
+  --minor-color: rgb(190,190,200);
+  --emphasis-color: rgb(27,211,165);
+}
+
+
+
+/* DEFAULTS --------------------------------------------------------------- */
+
+html {
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7em;
+}
+
+code {
+  line-height: 1.5em;
+  background: lightcyan;
+}
+
+
+/* TYPOGRAPHY ------------------------------------------------------------- */
+
+.primary-heading {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+
+/* LINKS & BUTTONS -------------------------------------------------------- */
+
+/* LAYOUT ----------------------------------------------------------------- */
+
+.centered-container {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+}
+
+.box-wide {
+  width: 450px;
+  height: 300px;
+  display: inline-block;
+}
+
+
+/* COMPONENTS ------------------------------------------------------------- */
+
+/* COSMETIC --------------------------------------------------------------- */
+
+.image-cover {
+  object-fit: cover;
+  object-position: right top;
+}
+
+.linear-g {
+  background: linear-gradient(0.1turn, #7fffd4, #683af9);
+}
+
+.radial-g {
+  background: radial-gradient(#7fffd4, #683af9);
+}
+
+.repeat-linear-g {
+  background: repeating-linear-gradient(#7fffd4, #683af9 100px);
+}
+
+.repeat-radial-g {
+  background: repeating-radial-gradient(#7fffd4, #683af9 60px);
+}
+
+.conic-g {
+  background: conic-gradient(from 180deg, #7fffd4, #683af9);
+}
+
+.fancy-repeat-g {
+  background: repeating-linear-gradient(to bottom right, powderblue 0, powderblue 5px, white 5px, white 15px);
+}
+
+.fancy-multiple-g-1 {
+  background:
+    linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 95%),
+    linear-gradient(to left, rgba(255,0,0,1), rgba(255,0,0,0));
+}
+
+.fancy-multiple-g-2 {
+  background:
+    linear-gradient(135deg, rgba(255,255,0,1), rgba(255,255,0,0) 75%),
+    linear-gradient(45deg, rgba(255,0,0,1), rgba(255,0,0,0) 75%),
+    linear-gradient(225deg, rgba(255,255,255,1), rgba(255,255,255,0) 75%),
+    linear-gradient(315deg, rgba(255,0,255,1), rgba(255,0,255,0) 75%);
+}
+
+.fancy-multiple-g-3 {
+  background:
+    linear-gradient(217deg, rgba(255,0,0,.85), rgba(255,0,0,0) 75%),
+    linear-gradient(127deg, rgba(0,255,0,.85), rgba(0,255,0,0) 75%),
+    linear-gradient(336deg, rgba(0,0,255,.85), rgba(0,0,255,0) 75%);
+}
+
+.fancy-stop-g {
+  background: linear-gradient(to right, red 0 20%, tomato 20% 40%, powderblue 40% 60%, honeydew 60% 80%, indigo 80% 100%);
+}
+
+.fancy-conic-g {
+  background: conic-gradient(red 0 36deg, tomato 36deg 160deg, powderblue 160deg 280deg, honeydew 280deg 360deg);
+  border-radius: 50%;
+}
+
+.fancy-repeat-conic-g {
+  background: repeating-conic-gradient(at 20% 100%, honeydew 0 9deg, powderblue 9deg 18deg);
+  border-radius: 50%;
+}
+
+/* UTILITY ---------------------------------------------------------------- */
+
+/* STATE ------------------------------------------------------------------ */
