@@ -3,23 +3,42 @@
 
 <head>
   <meta charset="utf-8">
-  <title>CSS Fit Image</title>
+  <title>CSS Object Fit</title>
   <link href="base.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 </head>
 
 <body>
 
-  <header>
-    <h1 class="primary-heading">CSS Fit Image</h1>
+  <header class="centered-container">
+    <h1 class="primary-heading">CSS Object Fit & Position</h1>
     <nav></nav>
   </header>
 
-  <main>
+  <main class="centered-container">
+
+    <p><code>object-fit</code> sets how the content of a replaced element, such as an &lt;img&gt; or &lt;video&gt;, should be resized to fit its container. You can modify the alignment within the element's box using the <code>object-position</code> property.</p>
 
     <img class="image image-contain" src="plant.jpg">
     <img class="image image-cover" src="plant.jpg">
+    <img class="image image-fill" src="plant.jpg">
 
+    <h2 class="primary-heading">object-fit values</h2>
+    <ul>
+      <li><code>fill</code> - stretched to fill the element’s content box</li>
+      <li><code>contain</code> - scaled to maintain its aspect ratio while fitting within the element’s content box</li>
+      <li><code>cover</code> - sized to maintain its aspect ratio while filling the element’s entire content box</li>
+      <li><code>none</code> - no resizing</li>
+      <li><code>scale-down</code> - sized as if none or contain were specified, whichever would result in a smaller concrete object size</li>
+    </ul>
+
+    <h2 class="primary-heading">object-position values</h2>
+    <ul>
+      <li><code>object-position: 50% 50%;</code></li>
+      <li><code>object-position: right top;</code></li>
+      <li><code>object-position: center;</code></li>
+      <li><code>object-position: 250px 125px;</code></li>
+    </ul>
 
   </main>
 

@@ -23,7 +23,14 @@ html {
   font-family: var(--main-font);
   font-size: 16px;
   font-weight: 400;
+  line-height: 1.7em;
 }
+
+code {
+  line-height: 1.5em;
+  background: lightcyan;
+}
+
 
 /* TYPOGRAPHY ------------------------------------------------------------- */
 
@@ -39,26 +46,37 @@ html {
 
 /* LAYOUT ----------------------------------------------------------------- */
 
+.centered-container {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+
 /* COMPONENTS ------------------------------------------------------------- */
+
+/* COSMETIC --------------------------------------------------------------- */
 
 .image {
   background: rgba(50,50,50,.1);
   width: 300px;
   height: 300px;
 }
+
 .image-contain {
   object-fit: contain;
   object-position: center;
 }
+
 .image-cover {
   object-fit: cover;
   object-position: right top;
 }
 
+.image-fill {
+  object-fit: fill;
+  object-position: right top;
+}
 
-
-
-/* COSMETIC --------------------------------------------------------------- */
 
 /* UTILITY ---------------------------------------------------------------- */
 
