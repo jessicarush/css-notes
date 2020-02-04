@@ -56,7 +56,6 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px 0;
   float: left;
 }
 
@@ -74,9 +73,40 @@ code {
   margin-left: 50px;
 }
 
+.trans-example-2 {
+  width: 400px;
+  height: 150px;
+  position: relative;
+}
+
+.trans-example-2__box {
+  width: 100px;
+  height: 100px;
+  background: rgb(142,87,250);
+  border-radius: 3px;
+  color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-property: transform top left background;
+  transition-duration: .5s;
+  transition-timing-function: ease-out;
+}
+
+.trans-example-2:hover .trans-example-2__box {
+  transform: rotate(1turn) scale(.45);
+  top: 75px;
+  left: 350px;
+  background: rgb(252,102,33);
+}
+
 .color-box {
   background: rgb(242,244,248);
-  transition: background .5s;
+  transition: background 1s;
 }
 
 .color-box:hover {
