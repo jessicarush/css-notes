@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Transforms</title>
+  <link href="base.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1 class="primary-heading">CSS Transform</h1>
+  </header>
+
+  <main>
+    <p>The <code>transform</code> property lets you rotate, scale, skew, or translate (reposition) an element. It modifies the coordinate space of the CSS visual formatting model.</p>
+
+    <p>There are many <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">transform functions</a> that can be used. The most basic ones are as follows...</p>
+
+    <div>
+      <h2 class="secondary-heading">rotate()</h2>
+      <p>Rotates an element around a fixed point on the 2D plane.</p>
+      <div class="trans-rotate box">rotate(10deg)</div>
+    </div>
+
+    <div>
+      <h2 class="secondary-heading">scale()</h2>
+      <p>Scales an element up or down on the 2D plane.</p>
+      <div class="trans-scale box">scale(0.75, 0.75)</div>
+    </div>
+
+    <div>
+      <h2 class="secondary-heading">skew(25deg, 5deg)</h2>
+      <p>Skews an element on the 2D plane.</p>
+      <div class="trans-skew box">scale(25deg, 5deg)</div>
+    </div>
+
+    <div>
+      <h2 class="secondary-heading">translate()</h2>
+      <p>Repositions an element on the 2D plane.</p>
+      <div class="trans-translate box">translate(50%, 25px)</div>
+    </div>
+
+    <div>
+      <h2 class="secondary-heading">perspective()</h2>
+      <p>Sets the distance between the user and the z=0 plane. In order to see perspective, you need to have also applied another transformation like rotate.</p>
+      <div class="trans-rotatexy box">rotate(-15deg) rotateY(30deg)</div>
+      <div class="trans-perspective box">rotate(-15deg) rotateY(30deg) perspective(250px)</div>
+    </div>
+
+    <div>
+      <h2 class="secondary-heading">matrix()</h2>
+      <p>Describes a homogeneous 2D transformation matrix. The values represent the following functions:</p>
+      <p><code>matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )</code></p>
+      <div class="trans-matrix box">matrix(1.4, 0.25, 0.25, 1.4, 100, 50)</div>
+    </div>
+  </main>
+
+  <footer>
+  </footer>
+
+</body>
+</html>

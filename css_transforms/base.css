@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+
+
+/* VARIABLES -------------------------------------------------------------- */
+
+:root {
+  --heading-font: 'Open Sans', sans-serif;
+  --main-font: 'Open Sans', sans-serif;
+  --minor-font: 'Open Sans', sans-serif;
+  --heading-color: rgba(0,0,50,.9);
+  --main-color: rgba(70,70,90,.9);
+  --minor-color: rgb(190,190,200);
+  --emphasis-color: rgb(27,211,165);
+}
+
+
+
+/* DEFAULTS --------------------------------------------------------------- */
+
+html {
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* TYPOGRAPHY ------------------------------------------------------------- */
+
+.primary-heading {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.secondary-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 3em;
+}
+
+
+/* LINKS & BUTTONS -------------------------------------------------------- */
+
+/* LAYOUT ----------------------------------------------------------------- */
+
+/* COMPONENTS ------------------------------------------------------------- */
+
+/* COSMETIC --------------------------------------------------------------- */
+
+.box {
+  background: aliceblue;
+  padding: 20px;
+  border-radius: 4px;
+  border: solid 5px turquoise;
+  width: 225px;
+  margin: 30px 0;
+  box-sizing: border-box;
+}
+
+.trans-rotate {
+  transform: rotate(10deg);
+}
+
+.trans-scale {
+  transform: scale(0.75, 0.75);
+}
+
+.trans-skew {
+  transform: skew(25deg, 5deg);
+}
+
+.trans-translate {
+  transform: translate(50%, 25px);
+}
+
+.trans-matrix {
+  transform: matrix(1.4, 0.25, 0.25, 1.4, 100, 50);
+}
+
+.trans-rotatexy {
+  transform: rotate(-15deg) rotateY(30deg);
+}
+
+.trans-perspective {
+  transform: perspective(250px) rotate(-15deg) rotateY(30deg);
+}
+
+/* UTILITY ---------------------------------------------------------------- */
+
+/* STATE ------------------------------------------------------------------ */
