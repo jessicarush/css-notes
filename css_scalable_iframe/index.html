@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Site | Page</title>
+  <link href="base.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1 class="primary-heading">CSS Scalable iframe</h1>
+    <nav></nav>
+  </header>
+
+  <main>
+    <p> This is useful specifically for embeded youtube videos. By default these use iframes. What we want to do is set the iframe to be 100% width of its contaoner and have the height automatically scale to an aspect ratio of 16:9, or 56.25% of the width. There is a <a href="https://jameshfisher.com/2017/08/30/how-do-i-make-a-full-width-iframe/" target="_blank">good explantion of this here</a>.</p>
+
+    <p>If you were to set the height of an element to be 56.25%, this would be calculated from the height of the parent element (provided the parent element has a defined height). But padding can be used as a sort of hack because a padding value specified as a perecent, is always <strong>% of the width of the containing element</strong>. In other words, a padding-top of 56.25% will give us our aspect ratio of 16:9. From there we can just use absolute positioning to place our iframe on top:</p>
+
+    <div class="video-content">
+      <iframe src="https://www.youtube.com/embed/qI8-3kF5nlU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+  </main>
+
+  <footer>
+  </footer>
+
+</body>
+</html>

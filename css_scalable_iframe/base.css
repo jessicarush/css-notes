@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+
+
+/* VARIABLES -------------------------------------------------------------- */
+
+:root {
+  --heading-font: 'Open Sans', sans-serif;
+  --main-font: 'Open Sans', sans-serif;
+  --minor-font: 'Open Sans', sans-serif;
+  --heading-color: rgba(0,0,50,.9);
+  --main-color: rgba(70,70,90,.9);
+  --minor-color: rgb(190,190,200);
+  --emphasis-color: rgb(27,211,165);
+}
+
+
+/* DEFAULTS --------------------------------------------------------------- */
+
+html {
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body {
+  max-width: 1000px;
+}
+
+/* TYPOGRAPHY ------------------------------------------------------------- */
+
+.primary-heading {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.highlight-text {
+  color: var(--emphasis-color);
+}
+
+/* LINKS & BUTTONS -------------------------------------------------------- */
+
+/* LAYOUT ----------------------------------------------------------------- */
+
+/* COMPONENTS ------------------------------------------------------------- */
+
+.video-content {
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.video-content iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* COSMETIC --------------------------------------------------------------- */
+
+/* UTILITY ---------------------------------------------------------------- */
+
+/* STATE ------------------------------------------------------------------ */
