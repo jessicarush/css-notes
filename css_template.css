@@ -1,6 +1,31 @@
 @charset "UTF-8";
 
-/* VARIABLES -------------------------------------------------------------- */
+/**
+ * css_template.css
+ *
+ * Decscription and notes...
+ *
+ * Sections
+ * - Varibales
+ * - Typography
+ * - Links
+ * - Buttons
+ * - Lists
+ * - Tables
+ * - Images
+ * - Layout
+ * - Forms
+ * - Components
+ * - Cosmetic
+ * - Utility
+ * - State
+ * - Animation
+ * - Hacks
+ *
+ **/
+
+
+/* -- Variables ----------------------------------------------------------- */
 
 :root {
   --heading-font: 'Open Sans', sans-serif;
@@ -14,9 +39,7 @@
   --emphasis-color-dark: rgb(100,100,120);
 }
 
-
-
-/* DEFAULTS --------------------------------------------------------------- */
+/* -- Typography ---------------------------------------------------------- */
 
 html {
   color: var(--body-color);
@@ -46,10 +69,6 @@ ul {
   padding: 0;
 }
 
-
-
-/* TYPOGRAPHY ------------------------------------------------------------- */
-
 .small-allcaps {
   color: var(--heading-color);
   font-size: .85rem;
@@ -59,9 +78,7 @@ ul {
   margin: 0;
 }
 
-
-
-/* LINKS & BUTTONS -------------------------------------------------------- */
+/* -- Links --------------------------------------------------------------- */
 
 .primary-link:link,
 .primary-link:visited {
@@ -74,6 +91,8 @@ ul {
 .primary-link:active {
   text-decoration: underline;
 }
+
+/* -- Buttons ------------------------------------------------------------- */
 
 .btn {
   background: none;
@@ -127,18 +146,15 @@ ul {
   background: var(--emphasis-color-dark);
 }
 
+/* -- Lists --------------------------------------------------------------- */
 
+/* -- Tables -------------------------------------------------------------- */
 
-/* LAYOUT ----------------------------------------------------------------- */
+/* -- Images -------------------------------------------------------------- */
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-}
+/* -- Layout -------------------------------------------------------------- */
 
-
-
-/*  COMPONENTS ------------------------------------------------------------ */
+/* -- Forms --------------------------------------------------------------- */
 
 .subscribe-form {
   width: 100%;
@@ -177,25 +193,22 @@ ul {
   background: var(--emphasis-color-dark);
 }
 
+/* -- Components ---------------------------------------------------------- */
 
-
-/* COSMETIC --------------------------------------------------------------- */
+/* -- Cosmetic ------------------------------------------------------------ */
 
 .gradient-bg {
   background: var(--emphasis-color);
   background: linear-gradient(to bottom right, var(--emphasis-color-dark), var(--emphasis-color));
 }
 
-
-
-/* UTILITY ---------------------------------------------------------------- */
+/* -- Utility ------------------------------------------------------------- */
 
 .u-nomargin {
   margin: 0;
 }
 
-
-/* STATE ------------------------------------------------------------------ */
+/* -- State --------------------------------------------------------------- */
 
 .is-hidden {
   display: none;
@@ -215,6 +228,8 @@ ul {
   border: 0;
 }
 
+/* -- Animations --------------------------------------------------------------- */
+
 @keyframes slide_from_bottom {
   0% {
     transform: translateY(300%);
@@ -229,3 +244,5 @@ ul {
 .animate {
   animation: slide_from_bottom 1s;
 }
+
+/* -- Hacks --------------------------------------------------------------- */
