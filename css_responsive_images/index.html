@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Site | Page</title>
+  <link href="base.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1 class="primary-heading">CSS Responsive Images</h1>
+    <nav></nav>
+  </header>
+
+  <main>
+    <p>
+      This demo looks at two ways of creating repsonsive images as discussed in <a href="https://pusher.com/sessions/meetup/viennajs/an-introduction-to-html5-responsive-images?utm_source=twitter&utm_medium=social&utm_campaign=sessions-html5-responsive-images" target="_blank" rel="noopener noreferrer">this talk by Roland Schütz</a>. There's also a great explanation on MDN: <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank" rel="noopener noreferrer">Responsive Images</a>.
+    </p>
+
+    <h2>Responsive in terms of art direction</h2>
+
+    <p>
+      The idea here is that we want to specify <span class="highlight">different images</span> based on the screen size.
+    </p>
+
+    <p>For example:</p>
+
+    <picture>
+      <source media="(min-width: 800px)" srcset="cat.jpg, cat_2x.jpg 2x">
+      <source media="(min-width: 450px)" srcset="cat-small.jpg, cat-small_2x.jpg 2x">
+      <img src="cat-fallback.jpg" srcset="cat-fallback_2x.jpg 2x" alt="a cat">
+    </picture>
+
+    <p>
+      In the code above the <code>source</code> element specifies the different images to use based on the min-width of the media. These will be checked top down so the first matching condition will be used. The <code>srcset</code> attribute provides a double-density version for high res screens. The <code>img</code> element provides a fallback image in the event that zero of the conditions are met or the browser is outdated.
+    </p>
+
+    <p>
+      Keep in mind, this approach requires a lot of work in preparing all the different images.
+    </p>
+
+    <h2>Responsive in terms of performance</h2>
+
+    <p>
+      The idea here is that we want to make <span class="highlight">different image sizes</span> available so that each device can display only what it needs.
+    </p>
+
+    <p>For example:</p>
+
+    <img srcset="tiger-400.jpg 400w,
+                 tiger-800.jpg 800w,
+                 tiger-1200.jpg 1200w,
+                 tiger-1600.jpg 1600w"
+         sizes="(max-width: 600px) 95vw,
+                (max-width: 900px) 600px,
+                (max-width: 1400px) 900px,
+                1400px"
+         src="tiger-400.jpg"
+         alt="a tiger">
+
+    <p>
+      In the code above, the <code>srcset</code> attribute specifies a series of images along with their intrinsic width in pixels.
+    </p>
+
+    <p>
+      The <code>sizes</code> attribute defines a set of media conditions (e.g. screen widths) followed by a value which is the width of the "slot" the image will fill when the media condition is true. The last value in this list would be the default (fallback) size. You could, if you wanted, specify only this last default instruction. For example, in the example below which says "display the image at 50vw no matter what". Note: For the slot width, you may provide an absolute length (px, em) or a length relative to the viewport (vw), but not percentages.
+    </p>
+
+    <p>
+      So, with these attributes in place, the browser will:
+    </p>
+
+    <ol>
+      <li>
+        Look at its device width.
+      </li>
+      <li>
+        Work out which media condition in the sizes list is the first one to be true.
+      </li>
+      <li>
+        Look at the slot size given to that media query.
+      </li>
+      <li>
+        Load the image referenced in the srcset list that has the same size as the slot or, if there isn't one, the first image that is bigger than the chosen slot size.
+    </li>
+    </ol>
+
+    <img srcset="tiger-400.jpg 400w,
+                 tiger-800.jpg 800w,
+                 tiger-1200.jpg 1200w,
+                 tiger-1600.jpg 1600w"
+         sizes="50vw"
+         src="tiger-400.jpg"
+         alt="a tiger">
+
+    <p>
+      Note that Google's web page speed test will give you a bad rating if you only provide one size for your images.
+    </p>
+
+  </main>
+
+  <footer>
+  </footer>
+
+</body>
+</html>
