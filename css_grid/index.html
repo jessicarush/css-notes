@@ -32,7 +32,6 @@
     <div class="container-b__content-b">
       <code>
         <ul>
-
           <li>dispay: grid;</li>
           <li>grid-template-columns: 350px 1fr 150px;</li>
           <li>grid-template-rows: 50px auto 100px;</li>
@@ -47,7 +46,9 @@
           <li>grid-template: 50px auto 100px / 350px 1fr 150px; </li>
           <li class="comment"><em>/* (Shorthand) grid-template: 'grid-template-areas' template-row 'grid-template-areas' template-row / grid-template-columns */</em></li>
           <li>grid-template: 'side nav-l nav-r' 50px 'side main-l main-r' auto 'foot foot foot' 100px / 1fr 2fr 2fr; </li>
-
+          <li class="comment">
+            Grid tracks (rows/cols) can be defined using any length unit. Grid introduced the new fr unit which represents a fraction of the available space in the grid container. For example: 'grid-template-columns: 1fr 1fr 1fr' would create three equal width tracks that grow and shrink according to the available space.
+          </li>
         </ul>
       </code>
     </div>
