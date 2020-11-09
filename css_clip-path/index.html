@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS clip-path</title>
+  <link href="base.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="centered-container">
+    <h1 class="primary-heading">
+      CSS clip-path
+    </h1>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path">see MDN</a><br>
+    <a href="https://css-tricks.com/masking-vs-clipping-use/">see css-tricks Masking vs. Clipping</a><br>
+    <a href="https://24ways.org/2018/clip-paths-know-no-bounds/">see 24ways Clip Paths Know No Bounds</a>
+    <p><code>clip-path: circle(80%);</code></p>
+    <img class="clip-circle" src="img/clouds.jpg" alt="clouds" />
+    <p><code>clip-path: circle(50% at 200px 0);</code></p>
+    <img class="clip-poly" src="img/clouds.jpg" alt="clouds" />
+    <p><code>clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);</code></p>
+    <img class="clip-inset" src="img/clouds.jpg" alt="clouds" />
+  </header>
+</body>
+</html>
