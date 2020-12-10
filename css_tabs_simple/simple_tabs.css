@@ -1,0 +1,26 @@
+.simple-tabs__nav {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: space-around;
+}
+
+.simple-tabs__nav li {
+  display: inline;
+}
+
+.simple-tabs__btn {
+  text-decoration: none;
+}
+
+.simple-tabs__btn.active {
+  border-bottom: solid 1px red;
+}
+
+.simple-tabs__pane {
+  display: none;
+}
+
+.simple-tabs__pane.active {
+  display: block;
+}
