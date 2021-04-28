@@ -10,5 +10,3 @@ This is not a complete CSS Reference, but a collection of notes and demos that I
 Some helpful links I keep going back to:
 
 - [CSS Selector Reference](https://www.w3schools.com/cssref/css_selectors.asp)
-
--TEST
