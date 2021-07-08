@@ -24,6 +24,43 @@
     <div class="outer-ring"></div>
     <div class="inner-ring"></div>
 
+    <div class="flow-container">
+      <div class="flow-line flow-line--left"></div>
+      <div class="flow-line flow-line--right"></div>
+
+      <div class="flow-ball-clip-wrapper">
+        <div class="flow-ball-animation-wrapper">
+          <div class="flow-ball"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="percent-ring__container">
+      <svg viewBox="0 0 33.831 33.831" class="percent-ring">
+        <path id="percent-ring" class="percent-ring__path"
+        stroke-dasharray="75, 100"
+        d="M16.9155 1
+        a 15.9155 15.9155 0 0 1 0 31.831
+        a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+      </svg>
+    </div>
+
+    <button id="test-percent-ring">test</button>
+
+    <script type="text/javascript" charset="utf-8">
+      document.addEventListener('DOMContentLoaded', function() {
+        let btn = document.getElementById('test-percent-ring');
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          console.log('hello');
+          let percentRing = document.getElementById('percent-ring');
+          percentRing.style.strokeDasharray = '25, 100';
+
+        });
+      });
+    </script>
+
   </main>
 
   <footer>
