@@ -100,6 +100,11 @@ a:active {
   height: 900px; */
 }
 
+.container-c {
+  column-width: 150px;
+  /* column-count: 3; */
+}
+
 
 /* COMPONENTS ------------------------------------------------------------- */
 

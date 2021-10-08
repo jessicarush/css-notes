@@ -69,11 +69,8 @@ a:active {
   margin: 15px auto;
 }
 
-.fixed {
-  border: solid 2px aquamarine;
-  width: 800px;
-  height: 800px;
-  margin: 15px auto;
+.fixed-height {
+  height: 350px;
 }
 
 .box {
