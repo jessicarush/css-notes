@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS min max clamp</title>
+  <link href="base.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1 class="primary-heading">
+      CSS min(), max(), clamp()
+    </h1>
+  </header>
+
+  <main>
+    <div class="box min-demo">
+      <p>width: min(50vw, 600px);</p>
+    </div>
+
+    <div class="box max-demo">
+      <p>width: max(50vw, 600px);</p>
+    </div>
+
+    <div class="box clamp-demo">
+      <p>width: clamp(300px, 50vw, 600px);</p>
+    </div>
+
+    <p class="font-size-clamp">
+      font-size: clamp(1rem, 5vw, 3rem);
+    </p>
+
+    <p class="clamp-ch">
+      <strong>width: clamp(45ch, 50%, 80ch);</strong>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis risus varius metus ullamcorper eleifend id at urna. Etiam tempus consectetur sem a eleifend. Aliquam aliquet at ante aliquet efficitur. Phasellus rutrum elit non nisi pellentesque, ut tincidunt odio scelerisque
+    </p>
+
+  </main>
+
+  <footer>
+  </footer>
+
+</body>
+</html>
