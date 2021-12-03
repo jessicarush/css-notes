@@ -58,8 +58,6 @@ a:active {
   color: var(--emphasis-color);
 }
 
-
-
 /* LAYOUT ----------------------------------------------------------------- */
 
 .flexible {
@@ -104,6 +102,7 @@ a:active {
 
 .container-b {
   display: flex;
+  gap: 5px;
 }
 
 .container-b__content-a {
@@ -261,38 +260,62 @@ a:active {
 
 
 .container-h {
+  min-height: 400px;
   display: flex;
   flex-direction: row;
-  align-items: center;
   flex-wrap: wrap;
+  gap: 5px; 
+  /* align-items: center; */
   /* The align-content property has no effect on single-line flex boxes */
   /* align-content: flex-start; */
   /* align-content: flex-end; */
   /* align-content: baseline; */
   /* align-content: first baseline; */
   /* align-content: last baseline; */
-  /* align-content: center; */
+  align-content: center;
   /* align-content: stretch; */
   /* align-content: space-around; */
   /* align-content: space-evenly; */
-  align-content: space-between;
+  /* align-content: space-between; */
 }
 
 .container-h__content-a {
-  width: 150px;
-  height: 150px;
+  /* flex: 300px; */
+  width: 200px;
 }
 
-.container-h__content-b {
-  width: 150px;
-  height: 150px;
+.container-i {
+  min-height: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px; 
+  align-content: center;
 }
 
-.container-h__content-c {
-  width: 150px;
-  height: 150px;
+.container-i__content-a {
+  /* flex: 200px is shorthand for flex: 1 1 200px; which is shorthand for */
+  /* flex-grow: 1; flex-shrink: 1; flex-basis: 200px; */
+  flex: 200px;
 }
 
+.container-j {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px; 
+}
+
+.container-j__content-a {
+  /* flex: 200px is shorthand for flex: 1 1 200px; which is shorthand for */
+  /* flex-grow: 1; flex-shrink: 1; flex-basis: 200px; */
+  /* This max says min width 200px and no more than 3 items per row. */
+  flex: max(300px, (100% - 10px) / 3);
+  /* Where the above formula has to account for the gap, we can also do this */
+  flex: max(300px, 100% / 4 - 0.1%);
+  /* Important because we're adding padding elsewhere */
+  box-sizing: border-box;
+}
 
 
 /* COMPONENTS ------------------------------------------------------------- */
@@ -302,8 +325,6 @@ a:active {
 .comment {
   color: var(--minor-color);
 }
-
-
 
 /* UTILITY ---------------------------------------------------------------- */
 

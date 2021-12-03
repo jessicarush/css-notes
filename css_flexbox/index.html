@@ -38,7 +38,8 @@
           <li>justify-content: space-between;</li>
           <li>align-items: center;</li>
           <li>flex-wrap: wrap;</li>
-          <li class="comment">/* Note: align-content has no effect when there is only one line of flex items */</li>
+          <li>gap: 5px;</li>
+          <li class="comment">/* Note: align-content has no effect when there is only one line of flex items or the container height isn't greater than the content.*/</li>
           <li>align-content: space-between;</li>
           <li class="comment"><em>/* (Shorthand) flex-flow: flex-direction flex-wrap; */</em></li>
           <li>flex-flow: row wrap;</li>
@@ -66,7 +67,9 @@
           <li>flex-basis: 200px;</li>
           <li>align-self: center;</li>
           <li class="comment"><em>/* (Shorthand) flex: flex-grow flex-shrink flex-basis; */</em></li>
-          <li>flex: 2 0 0;</li>
+          <li>flex: 1 1 200px;</li>
+          <li class="comment"><em>/* (Shorthand) equivalent to flex: 1, 1, 200px; */</em></li>
+          <li>flex: 200px;</li>
         </ul>
       </code>
     </div>
@@ -75,7 +78,7 @@
     </div>
   </div>
 
-  <div class="container-d flexible">
+  <div class="container-d flexible fixed-height">
     <div class="container-d__content-a box">
       <p>A</p>
     </div>
@@ -133,32 +136,80 @@
     <div class="container-h__content-a box">
       <p>A</p>
     </div>
-    <div class="container-h__content-b box">
-      <p>B</p>
+    <div class="container-h__content-a box">
+      <p>A</p>
     </div>
-    <div class="container-h__content-c box">
-      <p>C</p>
+    <div class="container-h__content-a box">
+      <p>A</p>
     </div>
-    <div class="container-h__content-c box">
-      <p>C</p>
+    <div class="container-h__content-a box">
+      <p>A</p>
     </div>
-    <div class="container-h__content-c box">
-      <p>C</p>
+    <div class="container-h__content-a box">
+      <p>A</p>
     </div>
-    <div class="container-h__content-c box">
-      <p>C</p>
+    <div class="container-h__content-a box">
+      <p>A</p>
     </div>
-    <div class="container-h__content-c box">
-      <p>C</p>
+    <div class="container-h__content-a box">
+      <p>A</p>
     </div>
-    <div class="container-h__content-c box">
-      <p>C</p>
+    <div class="container-h__content-a box">
+      <p>A</p>
     </div>
-    <div class="container-h__content-c box">
-      <p>C</p>
+  </div>
+
+  <div class="container-i flexible">
+    <div class="container-i__content-a box">
+      <p>A</p>
     </div>
-    <div class="container-h__content-c box">
-      <p>C</p>
+    <div class="container-i__content-a box">
+      <p>A</p>
+    </div>
+    <div class="container-i__content-a box">
+      <p>A</p>
+    </div>
+    <div class="container-i__content-a box">
+      <p>A</p>
+    </div>
+    <div class="container-i__content-a box">
+      <p>A</p>
+    </div>
+    <div class="container-i__content-a box">
+      <p>A</p>
+    </div>
+    <div class="container-i__content-a box">
+      <p>A</p>
+    </div>
+    <div class="container-i__content-a box">
+      <p>A</p>
+    </div>
+  </div>
+
+  <div class="container-j flexible">
+    <div class="container-j__content-a box">
+      <p>A</p>
+    </div>
+    <div class="container-j__content-a box">
+      <p>A</p>
+    </div>
+    <div class="container-j__content-a box">
+      <p>A</p>
+    </div>
+    <div class="container-j__content-a box">
+      <p>A</p>
+    </div>
+    <div class="container-j__content-a box">
+      <p>A</p>
+    </div>
+    <div class="container-j__content-a box">
+      <p>A</p>
+    </div>
+    <div class="container-j__content-a box">
+      <p>A</p>
+    </div>
+    <div class="container-j__content-a box">
+      <p>A</p>
     </div>
   </div>
 
