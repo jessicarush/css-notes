@@ -15,3 +15,31 @@ The `scrollbar-color` property controls the two colors of a scrollbar: the thumb
   scrollbar-color: red yellow;
 }
 ```
+
+## min(), max(), clamp()
+
+These three, like `calc()` are math functions which allow math expressions with (`+` `-` `*` `/`).
+
+> The max() CSS function lets you set the largest (most positive) value from a list of comma-separated expressions as the value of a CSS property value. The max() function can be used anywhere a `<length>`, `<frequency>`, `<angle>`, `<time>`, `<percentage>`, `<number>`, or `<integer>` is allowed.
+
+e.g. `width: max(20vw, 100px);`
+
+The above value will be set to 20vw or 100px, whichever is greater. If the viewport width was 1000px, the element actual width would be 200px. Think of the `max()` value as providing the *minimum* value a property can have.
+
+> The min() CSS function lets you set the smallest (most negative) value from a list of comma-separated expressions as the value of a CSS property value.
+
+e.g. `width: min(50vw, 200px);`
+
+If the viewport width was 1000px, the element actual width would be 200px.
+Think of the `min()` value as providing the *maximum* value a property can have.
+
+> The clamp() CSS function clamps a value between an upper and lower bound. clamp() enables selecting a middle value within a range of values between a defined minimum and maximum. It takes three parameters: a minimum value, a preferred value, and a maximum allowed value. 
+
+e.g. `width: clamp(250px, 50vw, 800px);`
+
+To use `clamp()`, enter three values: a minimum value, ideal value (from which to calculate), and a maximum value.
+
+see also: <https://web.dev/min-max-clamp>
+
+
+## minmax()
