@@ -27,12 +27,14 @@ html {
 
 /* TYPOGRAPHY ------------------------------------------------------------- */
 
+.max-width {
+  max-width: 200px;
+}
 .truncate-text {
   /* display: inline-block; */
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 220px;
 }
 
 

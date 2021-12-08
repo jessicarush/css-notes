@@ -178,12 +178,38 @@ a:active {
 }
 
 .container-h {
+  /* breakpoint */
+  --w: 400px;
+  /* num of columns when over breakpoint */
+  --n: 5;
+  /* num of columns when under breakpoint */
+  --m: 1;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      clamp(
+        100% / (var(--n) + 1) + 0.1%,
+        (var(--w) - 100vw) * 1000,
+        100% / (var(--m) + 1) + 0.1%
+      ),
+      1fr
+    )
+  ); 
+  gap: 5px;
+}
+
+.container-i {
   /* first breakpoint */
   --w1: 800px;
+  /* number of columns when over first breakpoint */
   --n: 5;
   /* second breakpoint */
   --w2: 400px;
+  /* number of columns when over second breakpoint */
   --m: 2;
+  /* cols will be 100% when under second breakpoint */
 
   display: grid;
   grid-template-columns: repeat(
