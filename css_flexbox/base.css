@@ -264,7 +264,7 @@ a:active {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 5px; 
+  gap: 5px;
   /* align-items: center; */
   /* The align-content property has no effect on single-line flex boxes */
   /* align-content: flex-start; */
@@ -289,7 +289,7 @@ a:active {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 5px; 
+  gap: 5px;
   align-content: center;
 }
 
@@ -303,7 +303,7 @@ a:active {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 5px; 
+  gap: 5px;
 }
 
 .container-j__content-a {
@@ -316,6 +316,51 @@ a:active {
   /* Important because we're adding padding elsewhere */
   box-sizing: border-box;
 }
+
+/*
+Note: as soon as you use flex-basis, the width property (if direction row)
+is ignored. Both min-width and max-width can be used to clamp the size.
+*/
+
+.container-k {
+  border: solid 2px aquamarine;
+  display: flex;
+  flex-direction: row;
+}
+
+.container-k .box {
+  padding: 0;
+}
+
+.container-k__content-a {
+  flex: 0 0 100px;
+}
+
+.container-k__content-a p {
+  background: gold;
+}
+
+.container-k__content-b {
+  flex: 1 1 auto;
+  min-width: 100px;
+  max-width: 300px;
+}
+
+.container-k__content-b p {
+  background: pink;
+}
+
+.container-k__content-c {
+  flex: 1 1 auto;
+  min-width: 100px;
+  max-width: 200px;
+  margin-left: auto;
+}
+
+.container-k__content-c p {
+  background: green;
+}
+
 
 
 /* COMPONENTS ------------------------------------------------------------- */
