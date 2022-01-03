@@ -544,7 +544,7 @@ Note however that the more a component does, or the more specific a component is
 
 To take thinks further (as Tailwind's creator explains in the link above), these utility classes can also be used to remove component classes that will never actually get reused (e.g. main navigation bar), thus removing of a lot of bloat and complexity in stylesheets.
 
-Keep in mind though, the cost od using too much utility-first CSS, is your code can become harder to read and maintain in the long-term. There’s also a deeper problem: because you are essentially recreating the CSS API with utility classes, you can end up with a huge file.
+Keep in mind though, the cost od using too much utility-first CSS, is your code can become harder to read and maintain in the long-term. There’s also a deeper problem: because you are essentially recreating the CSS API with utility classes, you can end up with a huge file and layering complexity on complexity.
 
 ------
 
