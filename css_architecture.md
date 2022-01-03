@@ -57,6 +57,7 @@ For example, don't:
 ```
 
 Instead, create classes that extend:
+
 ```css
 .widget {
   /* base rules */
@@ -91,6 +92,7 @@ In general, you should try to avoid tag selectors. Apply classes directly to the
 A *qualified selector* is one that includes the HTML element, for example, `div.error` is a *qualified selector*. In most cases it reduces reusability.
 
 For example, instead of this:
+
 ```css
 .error {
     color: red;
@@ -115,12 +117,14 @@ Do this:
 In the event that you want to use a qualified selector to indicate the HTML element that the class is intended for, use the following convention.
 
 Instead of:
+
 ```css
 ul.nav {}
 ```
 
 Do this:
-```css  
+
+```css
 /*ul*/.nav {}
 ```
 
@@ -135,6 +139,7 @@ In this example `.title` is too common a name. It may end up being used somewher
 ```
 
 Instead, do this:
+
 ```css
 .widget {}
 .widget__title {}
@@ -171,6 +176,7 @@ The *Single Responsibility Principle* is the idea that our CSS should be compose
 ```
 
 We can break these two classes out into four smaller, reusable responsibilities:
+
 ```css
 .box {
   display: block;
@@ -226,6 +232,7 @@ You would then write new, separate code to handle the content inside of that lay
 
 </div>
 ```
+
 Code which adheres to the *separation of concerns* can be more confidently modified, edited, extended, and maintained because we know how far its responsibilities reach.
 
 
@@ -337,6 +344,7 @@ These suggestions use [BEM](http://getbem.com/naming/)-like conventions.
 ```
 
 For example:
+
 ```css
 .nav {
     /* rules */
@@ -396,6 +404,7 @@ In the event that you absolutely need to override something with `!important;`, 
 There are a number of different approaches for categorizing your CSS.
 
 [SMACSS](https://smacss.com/book/categorizing) example:
+
 ```css
 /* BASE */
 /* The defaults, mostly single element selectors */
@@ -414,6 +423,7 @@ There are a number of different approaches for categorizing your CSS.
 ```
 
 [MCSS](https://operatino.github.io/MCSS/en/) example:
+
 ```css
 /* FOUNDATION */
 /* resets */
@@ -432,11 +442,10 @@ Ultimately, you have to find a pattern that works for you and your team. The str
 
 ```css
 /* VARIABLES */
-/* DEFAULTS */
-/* TYPOGRAPHY */
-/* LINKS & BUTTONS */
+/* BASE */
 /* LAYOUT */
-/* COMPONENTS  */
+/* COMPONENTS */
+/* LINKS & BUTTONS */
 /* COSMETIC */
 /* UTILITY */
 /* STATE */
@@ -486,11 +495,11 @@ Think about *dependency direction*. There are two ways you can write HTML/CSS:
 
 ### 1. CSS that depends on HTML
 
-This is when you name your classes based on your HTML, for example `author-bio`, or `footer-links`. In this model, your HTML is re-stylable (think [CSS Zen Garden](http://www.csszengarden.com/)) but your **CSS is not reusable**.
+This is when you name your classes based on your HTML, for example `author-bio`, or `footer-links`. In this model, your HTML is restyleable (think [CSS Zen Garden](http://www.csszengarden.com/)) but your **CSS is not reusable**.
 
 ### 2. HTML that depends on CSS
 
-This is when you name your classes in a content-agnostic way after repeating patterns in your UI, for example `media-card` or `sub-links`. In this model your CSS is reusable but your HTML is not as re-stylable.
+This is when you name your classes in a content-agnostic way after repeating patterns in your UI, for example `media-card` or `sub-links`. In this model your CSS is more reusable but your HTML is not as restyleable (as components marked with the same class are fixed to look the same).
 
 Choosing reusability will result in more generic class names like:
 ```css
@@ -505,23 +514,44 @@ The idea of breaking things up for reusability like this is a big part of [OOCSS
 
 ### Summary:
 
+In the end neither approach is right or wrong. The question to ask is... for the project you're working on, what would be more valuable: restyleable HTML or reusable CSS?
+
+Consider this:
+
 - The primary purpose of a class name is to provide a hook for CSS or JavaScript.
 - Class names impart little or no semantic information to machines or human readers.
 - Semantics are already served by the HTML markup.
 - Class names should communicate useful information to developers. For example:
+
 ```html
 <div class="news">
     <h2>News </h2>
     <p>... </p>
 </div>
 ```
+
 Giving the class name `news` provides no useful information and ensures the style can't be used for anything other than news.
 
 In short, pick a name that is sensible but somewhat ambiguous. **Aim for high reusability**.
 
+Note however that the more a component does, or the more specific a component is, the harder it is to reuse. This is where we may want to *also* use some [Utility-first CSS](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/) to help reuse components. For example, utility classes for common visual tweaks like:
+
+- Text sizes, colors, and weights
+- Border colors, widths, and positions
+- Background colors
+- Flexbox utilities
+- Padding and margin helpers
+
+To take thinks further (as Tailwind's creator explains in the link above), these utility classes can also be used to remove component classes that will never actually get reused (e.g. main navigation bar), thus removing of a lot of bloat and complexity in stylesheets.
+
+Keep in mind though, the cost od using too much utility-first CSS, is your code can become harder to read and maintain in the long-term. There’s also a deeper problem: because you are essentially recreating the CSS API with utility classes, you can end up with a huge file.
+
 ------
 
-## Sources:  
-[cssguidelin.es](https://cssguidelin.es/)  
-[About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)  
+## Sources:
+
+[About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
+[cssguidelin.es](https://cssguidelin.es/)
 [codeguide.co](http://codeguide.co/)
+[CSS Utility Classes and "Separation of Concerns"](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)
+
