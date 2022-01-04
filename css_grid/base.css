@@ -180,10 +180,8 @@ a:active {
 .container-h {
   /* breakpoint */
   --w: 400px;
-  /* num of columns when over breakpoint */
-  --n: 5;
-  /* num of columns when under breakpoint */
-  --m: 1;
+  --n: 5; /* num of columns when over breakpoint */
+  --m: 1; /* num of columns when under breakpoint */
 
   display: grid;
   grid-template-columns: repeat(
@@ -196,19 +194,17 @@ a:active {
       ),
       1fr
     )
-  ); 
+  );
   gap: 5px;
 }
 
 .container-i {
   /* first breakpoint */
   --w1: 800px;
-  /* number of columns when over first breakpoint */
-  --n: 5;
+  --n: 5; /* number of columns when over first breakpoint */
   /* second breakpoint */
   --w2: 400px;
-  /* number of columns when over second breakpoint */
-  --m: 2;
+  --m: 2; /* number of columns when over second breakpoint */
   /* cols will be 100% when under second breakpoint */
 
   display: grid;
@@ -222,6 +218,41 @@ a:active {
           100% / (var(--m) + 1) + 0.1%
         ),
         (var(--w2) - 100vw) * 1000,
+        100%
+      ),
+      1fr
+    )
+  );
+  gap: 5px;
+}
+
+.container-j {
+  /* first breakpoint */
+  --w1: 800px; /* number of columns when over first breakpoint */
+  --n: 5;
+  /* second breakpoint */
+  --w2: 600px; /* number of columns when over second breakpoint */
+  --m: 3;
+  /* third breakpoint*/
+  --w3: 400px;
+  --p: 2; /* number of columns when over third breakpoint */
+  /* cols will be 100% when under third breakpoint */
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(
+      clamp(
+        clamp(
+          clamp(
+            100%/ (var(--n) + 1) + 0.1%,
+            (var(--w1) - 100vw) * 1000,
+            100%/ (var(--m) + 1) + 0.1%
+          ),
+          (var(--w2) - 100vw) * 1000,
+          100%/ (var(--p) + 1) + 0.1%
+        ),
+        (var(--w3) - 100vw) * 1000,
         100%
       ),
       1fr
