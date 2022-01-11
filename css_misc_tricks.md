@@ -4,6 +4,29 @@
 
 <!-- toc -->
 
+## button reset
+
+```css
+.Btn {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  text-align: inherit;
+  cursor: pointer;
+}
+```
+
 ## scrollbar-color
 
 The `scrollbar-color` property controls the two colors of a scrollbar: the thumb and the track color. The track refers to the background of the scrollbar, which is generally fixed regardless of the scrolling position. The thumb refers to the moving part of the scrollbar, which floats on top of the track. See [MDN scrollbar-color](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color) for additional information.
@@ -33,7 +56,7 @@ e.g. `width: min(50vw, 200px);`
 If the viewport width was 1000px, the element actual width would be 200px.
 Think of the `min()` value as providing the *maximum* value a property can have.
 
-> The clamp() CSS function clamps a value between an upper and lower bound. clamp() enables selecting a middle value within a range of values between a defined minimum and maximum. It takes three parameters: a minimum value, a preferred value, and a maximum allowed value. 
+> The clamp() CSS function clamps a value between an upper and lower bound. clamp() enables selecting a middle value within a range of values between a defined minimum and maximum. It takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
 
 e.g. `width: clamp(250px, 50vw, 800px);`
 
