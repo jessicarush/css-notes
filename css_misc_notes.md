@@ -1,4 +1,4 @@
-# CSS Miscellaneous Stuff
+# CSS miscellaneous notes
 
 ## Table of contents
 
