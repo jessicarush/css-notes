@@ -66,3 +66,9 @@ see also: <https://web.dev/min-max-clamp>
 
 
 ## minmax()
+
+> The minmax() CSS function defines a size range greater than or equal to min and less than or equal to max. It is used with CSS Grids.
+
+## repeat()
+
+Note the difference between `auto-fit` and `auto-fill`.
