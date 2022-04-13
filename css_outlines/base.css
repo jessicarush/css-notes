@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/* VARIABLES -------------------------------------------------------------- */
+
+:root {
+  --heading-font: 'Open Sans', sans-serif;
+  --main-font: 'Open Sans', sans-serif;
+  --minor-font: 'Open Sans', sans-serif;
+  --heading-color: rgba(0,0,50,.9);
+  --main-color: rgba(70,70,90,.9);
+  --minor-color: rgb(190,190,200);
+  --emphasis-color: rgb(27,211,165);
+}
+
+/* DEFAULTS --------------------------------------------------------------- */
+
+html {
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* TYPOGRAPHY ------------------------------------------------------------- */
+
+.primary-heading {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+/* LINKS & BUTTONS -------------------------------------------------------- */
+
+/* LAYOUT ----------------------------------------------------------------- */
+
+.outline-and-border {
+  background: peachpuff;
+  border: solid 3px tomato;
+  border-radius: 3px;
+  outline: solid 3px orangered;
+  outline-offset: 5px;
+  padding: 1rem;
+  margin: 2em;
+  width: 300px;
+}
+
+.border-and-pseudo {
+  background: peachpuff;
+  border: solid 5px tomato;
+  border-radius: 3px;
+  position: relative;
+  padding: 1rem;
+  margin: 2em;
+  width: 300px;
+}
+
+.border-and-pseudo::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: blueviolet;
+  border: solid 5px orangered;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.border-and-box-shadow {
+  background: peachpuff;
+  position: relative;
+  padding: 1rem;
+  margin: 50px;
+  box-shadow:
+    0 0 0 5px hsl(0, 0%, 50%),
+    0 0 0 10px hsl(0, 0%, 60%),
+    0 0 0 15px hsl(0, 0%, 70%),
+    0 0 0 20px hsl(0, 0%, 80%),
+    0 0 0 25px hsl(0, 0%, 90%);
+  width: 300px;
+}
