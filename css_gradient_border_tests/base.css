@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+
+
+/* VARIABLES -------------------------------------------------------------- */
+
+:root {
+  --heading-font: 'Open Sans', sans-serif;
+  --main-font: 'Open Sans', sans-serif;
+  --minor-font: 'Open Sans', sans-serif;
+  --heading-color: rgba(255, 255, 255, .9);
+  --main-color: rgba(50, 50, 60, 1);
+}
+
+
+
+/* DEFAULTS --------------------------------------------------------------- */
+
+html {
+  background: rgb(54, 53, 75);
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* TYPOGRAPHY ------------------------------------------------------------- */
+
+.primary-heading {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.highlight-text {
+  color: var(--emphasis-color);
+}
+
+/* LINKS & BUTTONS -------------------------------------------------------- */
+
+/* LAYOUT ----------------------------------------------------------------- */
+
+/* COMPONENTS ------------------------------------------------------------- */
+
+.grad-border {
+  border: solid 5px transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(white, white),
+    linear-gradient(315deg, #833ab4, #fd1d1d 50%, #fcb045);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 0;
+  width: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .grad-bar {
+  background: rgba(255,255,255,.5);
+  padding: 25px;
+  width: 380px;
+  border-radius: 10px;
+  border-bottom: solid 5px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, tomato, cornsilk);
+} */
+
+.grad-bar {
+  background: rgba(255, 255, 255, .5);
+  padding: 25px;
+  width: 380px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.grad-bar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 20px;
+  background: linear-gradient(to left, tomato, cornsilk);
+  width: 100%;
+  border-radius: 10px;
+  /* clip-path: inset(50% 0 0 0); */
+  clip-path: inset(70% 0 0 0);
+}
+
+
+.outer-ring {
+  position: absolute;
+  left: 0;
+  height: 55px;
+  width: 55px;
+  background-image: linear-gradient(135deg, #FEED07 0%, #FE6A50 5%, #ED00AA 15%, #2FE3FE 50%, #8900FF 100%);
+  border-radius: 50%;
+
+  /*  Rotate  */
+  animation-duration: 2s;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+}
+
+.inner-ring {
+  position: absolute;
+  left: 0;
+  margin: 2px;
+  height: 51px;
+  width: 51px;
+  background-image: linear-gradient(0deg, #36295e, #1c1045);
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.flow-container {
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr;
+  grid-template-rows: auto;
+  width: 400px;
+  padding-top: 100px;
+  overflow-x: hidden;
+}
+
+.flow-line {
+  background: aquamarine;
+  width: 100%;
+  height: 2px;
+}
+
+.flow-line--left {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.flow-line--right {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+
+.flow-ball-clip-wrapper {
+  /* background: rgba(255,0,0,.2); */
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 50px 0 50px;
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  grid-row-start: 1;
+  position: relative;
+  top: -3px;
+  clip-path: polygon(0 0,
+      100% 0,
+      100% 100%,
+      calc(50% + 25px) 100%,
+      calc(50% + 25px) 0,
+      calc(50% - 25px) 0,
+      calc(50% - 25px) 100%,
+      0 100%);
+}
+
+.flow-ball-animation-wrapper {
+  width: 100%;
+  /* background: rgba(255,255,0,.2); */
+
+  /*  flow right  */
+  animation-duration: 3s;
+  animation-name: flow-right;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes flow-right {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.flow-ball {
+  width: 8px;
+  height: 8px;
+  background: green;
+  border-radius: 50%;
+}
+
+
+.percent-ring__container {
+  width: 55px;
+  height: 55px;
+  background: rgba(255, 255, 0, .2);
+}
+
+.percent-ring {
+  display: block;
+}
+
+.percent-ring__path {
+  stroke: rgb(106, 255, 161);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  animation: progress .5s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+
+/* COSMETIC --------------------------------------------------------------- */
+
+/* UTILITY ---------------------------------------------------------------- */
+
+/* STATE ------------------------------------------------------------------ */

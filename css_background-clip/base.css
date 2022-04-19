@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+
+
+/* VARIABLES -------------------------------------------------------------- */
+
+:root {
+  --heading-font: 'Open Sans', sans-serif;
+  --main-font: 'Open Sans', sans-serif;
+  --minor-font: 'Open Sans', sans-serif;
+  --heading-color: rgba(0,0,50,.9);
+  --main-color: rgba(70,70,90,.9);
+  --minor-color: rgb(190,190,200);
+  --emphasis-color: rgb(27,211,165);
+}
+
+
+
+/* DEFAULTS --------------------------------------------------------------- */
+
+html {
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7em;
+}
+
+code {
+  line-height: 1.5em;
+  background: lightcyan;
+}
+
+/* TYPOGRAPHY ------------------------------------------------------------- */
+
+.background-clip {
+  background: blue url('img/watercolor.jpg');
+  background-clip: text;
+  background-size: cover;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: var(--heading-font);
+  font-size: calc(10vw + 24px);
+  font-weight: 700;
+  line-height: 1.26em;
+  margin: 0;
+}
+
+/* LINKS & BUTTONS -------------------------------------------------------- */
+
+/* LAYOUT ----------------------------------------------------------------- */
+
+/* COMPONENTS ------------------------------------------------------------- */
+
+/* COSMETIC --------------------------------------------------------------- */
+
+/* UTILITY ---------------------------------------------------------------- */
+
+.u-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* STATE ------------------------------------------------------------------ */
