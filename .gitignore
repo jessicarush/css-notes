@@ -1,0 +1,24 @@
+# https://git-scm.com/docs/gitignore
+# https://help.github.com/articles/ignoring-files/
+
+# dependencies
+/node_modules
+
+# bytecode compiled
+__pycache__/
+
+# environments
+.env
+/venv
+
+# logs
+/logs
+
+# database
+app.db
+
+# misc
+.DS_Store
+
+# project specific
+working_files
