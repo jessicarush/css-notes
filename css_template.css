@@ -6,7 +6,7 @@
  * Decscription and notes...
  *
  * Sections
- * - Varibales
+ * - Variables
  * - Typography
  * - Links
  * - Buttons
@@ -246,3 +246,15 @@ ul {
 }
 
 /* -- Hacks --------------------------------------------------------------- */
+
+/* fixes a firefox bug where select menu options appear slightly indented */
+@-moz-document url-prefix() {
+  select {
+    text-indent: -2px;
+  }
+}
+
+/* In event delegation, prevents child elements from being event.target */
+button > * {
+  pointer-events: none;
+}
