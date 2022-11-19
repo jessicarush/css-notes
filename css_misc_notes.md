@@ -4,6 +4,16 @@
 
 <!-- toc -->
 
+- [button reset](#button-reset)
+- [scroll padding](#scroll-padding)
+- [smooth scrolling](#smooth-scrolling)
+- [scrollbar-color](#scrollbar-color)
+- [min(), max(), clamp()](#min-max-clamp)
+- [minmax()](#minmax)
+- [repeat()](#repeat)
+
+<!-- tocstop -->
+
 ## button reset
 
 ```css
@@ -32,6 +42,24 @@
 ```css 
 button {
   all: unset;
+}
+```
+
+## scroll padding 
+
+If you have a top fixed navbar and you want to link to anchors on the page you can offset the anchor using the `scroll-padding-top` on the `html` element. See: [css-tricks](https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/)
+
+```css
+html {
+  scroll-padding-top: 100px;
+}
+```
+
+## smooth scrolling
+
+```css
+html {
+  scroll-behavior: smooth;
 }
 ```
 
