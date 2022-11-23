@@ -44,6 +44,43 @@ code {
 
 /* LINKS & BUTTONS -------------------------------------------------------- */
 
+.gradient-btn {
+  display: inline-block;
+  font-family: var(--main-font);
+  font-size: .85rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: .25em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #666;
+  border: solid 1px #666;
+  margin: 0 35px 35px 0;
+  padding: 9px 40px;
+  text-align: center;
+  transition: color .3s;
+}
+
+.gradient-btn:hover {
+  -moz-border-image: -moz-linear-gradient(to right, var(--emphasis-color), #7f6dd4);
+  -webkit-border-image: -webkit-linear-gradient(to right, var(--emphasis-color), #7f6dd4);
+  border-image: linear-gradient(to right, var(--emphasis-color), #7f6dd4);
+  border-image-slice: 1;
+  color: var(--emphasis-color);
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .gradient-btn {
+    background-image: linear-gradient(to right, var(--emphasis-color), #7f6dd4);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .gradient-btn:hover {
+    color: rgba(102,102,102,.0);
+  }
+}
+
 /* LAYOUT ----------------------------------------------------------------- */
 
 .centered-container {

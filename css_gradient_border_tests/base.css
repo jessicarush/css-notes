@@ -10,6 +10,7 @@
   --minor-font: 'Open Sans', sans-serif;
   --heading-color: rgba(255, 255, 255, .9);
   --main-color: rgba(50, 50, 60, 1);
+  --emphasis-color: rgb(127,215,212);
 }
 
 
@@ -38,6 +39,43 @@ html {
 }
 
 /* LINKS & BUTTONS -------------------------------------------------------- */
+
+.grad-btn:link,
+.grad-btn:visited {
+  display: inline-block;
+  font-family: var(--main-font);
+  font-size: .75rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: .25em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border: solid 1px #fff;
+  margin: 0 35px 35px 0;
+  padding: 9px 40px;
+  text-align: center;
+}
+
+.grad-btn:hover,
+.grad-btn:active {
+  -moz-border-image: -moz-linear-gradient(to right, var(--emphasis-color), #7f6dd4);
+  -webkit-border-image: -webkit-linear-gradient(to right, var(--emphasis-color), #7f6dd4);
+  border-image: linear-gradient(to right, var(--emphasis-color), #7f6dd4);
+  border-image-slice: 1;
+  color: var(--emphasis-color);
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .grad-btn:hover,
+  .grad-btn:active {
+    background-image: linear-gradient(to right, var(--emphasis-color), #7f6dd4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
 
 /* LAYOUT ----------------------------------------------------------------- */
 
@@ -198,29 +236,6 @@ html {
 }
 
 
-.percent-ring__container {
-  width: 55px;
-  height: 55px;
-  background: rgba(255, 255, 0, .2);
-}
-
-.percent-ring {
-  display: block;
-}
-
-.percent-ring__path {
-  stroke: rgb(106, 255, 161);
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  animation: progress .5s ease-out forwards;
-}
-
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
 
 
 /* COSMETIC --------------------------------------------------------------- */
