@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/* VARIABLES -------------------------------------------------------------- */
+
+:root {
+  --heading-font: 'Open Sans', sans-serif;
+  --main-font: 'Open Sans', sans-serif;
+  --minor-font: 'Open Sans', sans-serif;
+  --heading-color: rgba(0,0,50,.9);
+  --main-color: rgba(70,70,90,.9);
+  --minor-color: rgb(190,190,200);
+  --emphasis-color: rgb(27,211,165);
+}
+
+/* DEFAULTS --------------------------------------------------------------- */
+
+html {
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* TYPOGRAPHY ------------------------------------------------------------- */
+
+.primary-heading {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.highlight-text {
+  color: var(--emphasis-color);
+}
+
+/* LINKS & BUTTONS -------------------------------------------------------- */
+
+/* LAYOUT ----------------------------------------------------------------- */
+
+.content {
+  border: solid 1px pink;
+  margin: 25px 0 50px 0;
+}
+
+.another {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  position: relative;
+  left: 20px;
+  top: 20px;
+  z-index: 2;
+}
+/* COMPONENTS ------------------------------------------------------------- */
+
+.thing {
+  position: relative;
+}
+
+.thing.isolated {
+  isolation: isolate;
+}
+
+.thing__one {
+  width: 100px;
+  height: 100px;
+  background: orange;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.thing__two {
+  width: 100px;
+  height: 100px;
+  background: blueviolet;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  z-index: 3;
+}
+/* COSMETIC --------------------------------------------------------------- */
+
+/* UTILITY ---------------------------------------------------------------- */
+
+/* STATE ------------------------------------------------------------------ */

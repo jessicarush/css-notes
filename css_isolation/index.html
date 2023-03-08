@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Site | Page</title>
+  <link href="base.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1 class="primary-heading">CSS isolation property</h1>
+    <nav></nav>
+  </header>
+
+  <main>
+    <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/isolation">isolation property</a> defines whether an element must create a new stacking content.</p>
+    <p>The isolation property is most helpful when used with:</p>
+    <ul>
+      <li>background-blend-mode</li>
+      <li>mix-blend-mode</li>
+      <li>z-index</li>
+    </ul>
+
+    <p>The problem: image we have the following component: a wrapper that doesn't set a z-index but has 2 elements inside that do have a z-index. This result of this situation may be confusing for some people (to me, it makes sense). If the component has a sibling with an in-between z-index, it'll get "interleaved" between the two elements inside the wrapper:
+    </p>
+
+    <div class="content">
+      <div class="thing">
+        <div class="thing__one"></div>
+        <div class="thing__two"></div>
+      </div>
+      <div class="another"></div>
+    </div>
+
+    <p>Adding <code>isolation: isolate;</code> to the wrapper:</p>
+
+    <div class="content">
+      <div class="thing isolated">
+        <div class="thing__one"></div>
+        <div class="thing__two"></div>
+      </div>
+      <div class="another"></div>
+    </div>
+
+
+  </main>
+
+  <footer>
+  </footer>
+
+</body>
+</html>
