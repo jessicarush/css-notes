@@ -14,6 +14,49 @@
 
 <!-- tocstop -->
 
+## Transition filters
+
+You can transition css filters, but the filters applied must match OR only one "end" has the filters. For example:
+
+This works:
+
+```css
+.profile-pic {
+  transition: filter .3s ease-in-out;
+}
+
+.profile-pic:hover {
+  filter: sepia(10%) brightness(1.1);
+}
+```
+
+And this works:
+
+```css
+.profile-pic {
+  filter: sepia(0%) brightness(1.02);
+  transition: filter .3s ease-in-out;
+}
+
+.profile-pic:hover {
+  filter: sepia(10%) brightness(1.1);
+}
+```
+
+
+But this does NOT work:
+
+```css
+.profile-pic {
+  filter: brightness(1.05);
+  transition: filter .3s ease-in-out;
+}
+
+.profile-pic:hover {
+  filter: sepia(10%) brightness(1.1);
+}
+```
+
 ## button reset
 
 ```css
