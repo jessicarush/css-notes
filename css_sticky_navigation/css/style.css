@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #43b29d;
+}
+
+body {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/* Navigation Settings */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+}
+
+nav li {
+  display: inline-block;
+  padding: 24px 10px;
+}
+
+nav li a {
+  color: #757575;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  height: 100vh;
+  padding: 15px;
+}
+
+/* Screens Settings */
+#screen1 {
+  background: #43b29d;
+}
+
+#screen2 {
+  background: #efc94d;
+}
+
+#screen3 {
+  background: #e1793d;
+}
+
+@media only screen and (max-width: 520px) {
+
+  nav li {
+    padding: 2px 4px;
+  }
+
+  nav li a {
+    font-size: 14px;
+  }
+
+}
