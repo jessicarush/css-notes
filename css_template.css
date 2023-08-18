@@ -3,20 +3,16 @@
 /**
  * css_template.css
  *
- * Decscription and notes...
+ * Description and notes...
  *
  * Sections
  * - Variables
+ * - Base
  * - Typography
  * - Links
  * - Buttons
- * - Lists
- * - Tables
- * - Images
  * - Layout
- * - Forms
  * - Components
- * - Cosmetic
  * - Utility
  * - State
  * - Animation
@@ -34,12 +30,11 @@
   --heading-color: rgba(40,40,80,.9);
   --subheading-color: rgb(0,0,0);
   --body-color: rgba(70,70,85,.9);
-  --minor-color: rgb(200,200,210);
   --emphasis-color: rgb(120,120,140);
   --emphasis-color-dark: rgb(100,100,120);
 }
 
-/* -- Typography ---------------------------------------------------------- */
+/* -- Base ---------------------------------------------------------------- */
 
 html {
   color: var(--body-color);
@@ -68,6 +63,42 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea,
+label,
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: inherit;
+  outline: none;
+}
+
+/* -- Typography ---------------------------------------------------------- */
 
 .small-allcaps {
   color: var(--heading-color);
@@ -127,14 +158,12 @@ ul {
 }
 
 .btn {
-  background: none;
   border-radius: 2px;
   display: inline-block;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1em;
   padding: 10px 20px 12px 20px;
-  text-decoration: none;
 }
 
 .btn--dark,
@@ -178,82 +207,71 @@ ul {
   background: var(--emphasis-color-dark);
 }
 
-/* -- Lists --------------------------------------------------------------- */
-
-/* -- Tables -------------------------------------------------------------- */
-
-/* -- Images -------------------------------------------------------------- */
-
 /* -- Layout -------------------------------------------------------------- */
-
-/* -- Forms --------------------------------------------------------------- */
-
-.subscribe-form {
-  width: 100%;
-}
-
-.subscribe-form__item  {
-  color: var(--emphasis-color);
-}
-
-.subscribe-form__field {
-  background: #fff;
-  border-radius: 4px 0 0 4px;
-  color: var(--emphasis-color);
-  font-size: .85rem;
-  padding: 10px 0;
-  text-indent: 10px;
-  width: 65%;
-}
-
-.subscribe-form__field:focus {
-  box-shadow: 0 0 5px rgba(180,180,180,.5);
-}
-
-.subscribe-form__submit {
-  background: var(--emphasis-color);
-  border-radius: 0 4px 4px 0;
-  color: #fff;
-  cursor: pointer;
-  font-weight: 600;
-  padding: 10px 0;
-  text-indent: 0;
-  width: 35%;
-}
-
-.subscribe-form__submit:focus {
-  background: var(--emphasis-color-dark);
-}
 
 /* -- Components ---------------------------------------------------------- */
 
-/* -- Cosmetic ------------------------------------------------------------ */
+/* -- Utility ------------------------------------------------------------- */
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nomargin {
+  margin: 0;
+}
 
 .gradient-bg {
   background: var(--emphasis-color);
   background: linear-gradient(to bottom right, var(--emphasis-color-dark), var(--emphasis-color));
 }
 
-/* -- Utility ------------------------------------------------------------- */
-
-.u-nomargin {
-  margin: 0;
+.is-hidden {
+  display: none;
 }
 
 /* -- State --------------------------------------------------------------- */
 
-.is-hidden {
-  display: none;
+::-moz-selection {
+  background: var(--emphasis-color);
+  color: #fff;
+  text-shadow: none;
 }
 
 ::selection {
   background: var(--emphasis-color);
   color: #fff;
+  text-shadow: none;
 }
 
-::-moz-selection {
-  background: var(--emphasis-color);
-  color: #fff;
+::-webkit-input-placeholder {
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  opacity: .25;
+}
+
+::-moz-placeholder {
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  opacity: .25;
+}
+
+:-ms-input-placeholder {
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  opacity: .25;
+}
+
+::placeholder {
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  opacity: .25;
 }
 
 ::-moz-focus-inner {
@@ -278,13 +296,6 @@ ul {
 }
 
 /* -- Hacks --------------------------------------------------------------- */
-
-/* fixes a firefox bug where select menu options appear slightly indented */
-@-moz-document url-prefix() {
-  select {
-    text-indent: -2px;
-  }
-}
 
 /* In event delegation, prevents child elements from being event.target */
 button > * {
